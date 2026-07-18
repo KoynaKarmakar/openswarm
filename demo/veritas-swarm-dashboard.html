@@ -276,7 +276,7 @@
       <div id="knowOut"><p class="empty">No request processed yet.</p></div>
     </div>
     <div class="panel">
-      <h4>👤 Identity &amp; Fraud + Google VC</h4>
+      <h4>👤 Identity &amp; Fraud · Google VC · Aadhaar</h4>
       <div id="idOut"><p class="empty">No request processed yet.</p></div>
     </div>
     <div class="panel">
@@ -319,7 +319,7 @@
   var AGENTS = [
     { id: "guardrail", ico: "🛡️", name: "Guardrail", role: "PII redaction · prompt-injection · hard compliance" },
     { id: "knowledge", ico: "🔍", name: "Knowledge", role: "Qdrant RAG · answer only from policy, else refuse" },
-    { id: "identity_fraud", ico: "👤", name: "Identity & Fraud", role: "KYC · XGBoost fraud · Google VC signature" },
+    { id: "identity_fraud", ico: "👤", name: "Identity & Fraud", role: "KYC · XGBoost fraud · Google VC · Aadhaar OTP" },
     { id: "auditor", ico: "📜", name: "Auditor", role: "confidence score · SHA-256 hash-chain ledger", terminal: true }
   ];
   var pipeline = $("pipeline");
@@ -373,6 +373,16 @@
     return { text: out, types: types, count: count };
   }
 
+  /* ---- Verhoeff (real Aadhaar checksum, mirrors connectors/aadhaar_auth.py) ---- */
+  var VD = [[0,1,2,3,4,5,6,7,8,9],[1,2,3,4,0,6,7,8,9,5],[2,3,4,0,1,7,8,9,5,6],[3,4,0,1,2,8,9,5,6,7],[4,0,1,2,3,9,5,6,7,8],[5,9,8,7,6,0,4,3,2,1],[6,5,9,8,7,1,0,4,3,2],[7,6,5,9,8,2,1,0,4,3],[8,7,6,5,9,3,2,1,0,4],[9,8,7,6,5,4,3,2,1,0]];
+  var VP = [[0,1,2,3,4,5,6,7,8,9],[1,5,7,6,2,8,3,0,9,4],[5,8,0,9,1,6,7,4,3,2],[8,9,1,6,0,4,3,5,2,7],[9,4,5,3,1,2,6,8,7,0],[4,2,8,6,5,7,3,9,0,1],[2,7,9,3,8,0,6,4,1,5],[7,0,4,6,9,1,3,2,5,8]];
+  function verhoeffValid(num) {
+    if (!/^\d+$/.test(num)) return false;
+    var c = 0, r = num.split("").reverse();
+    for (var i = 0; i < r.length; i++) c = VD[c][VP[i % 8][parseInt(r[i], 10)]];
+    return c === 0;
+  }
+
   /* ---- injection / policy-evasion (mirrors swarm/guards/injection.py) ---- */
   var INJ = [
     { cat: "prompt_injection", label: "ignore-previous-instructions", re: /\bignore\s+(?:all\s+|the\s+)?(?:previous|above|prior)\s+(?:instructions?|prompts?|rules?)/i },
@@ -420,7 +430,9 @@
     { id: "C", label: "KYC with Aadhaar (PII)", dot: "var(--info)", vc: "untrusted",
       msg: "Please verify my KYC. My Aadhaar is 1234 5678 9012, phone 9876543210, email ravi@example.com." },
     { id: "D", label: "High-risk transfer (fraud)", dot: "var(--warn)", vc: "valid",
-      msg: "Approve an urgent transfer of 8,00,000 to a new merchant. 14 attempts in the last hour, location differs from usual." }
+      msg: "Approve an urgent transfer of 8,00,000 to a new merchant. 14 attempts in the last hour, location differs from usual." },
+    { id: "E", label: "Aadhaar e-KYC (OTP)", dot: "var(--info)", vc: "none",
+      msg: "Onboard me via Aadhaar OTP e-KYC. My Aadhaar is 9999 4105 7058 — send the OTP to my linked mobile." }
   ];
   var chips = $("chips");
   SCEN.forEach(function (s, i) {
@@ -534,6 +546,29 @@
       else if (vc.state === "valid") { vars.identity.rule = "VC-001"; }
     }
 
+    // Aadhaar OTP e-KYC (UIDAI-shaped): runs if an Aadhaar number is present.
+    var aadRows = "";
+    var aadMatch = msg.match(/\b\d{4}\s?\d{4}\s?\d{4}\b/);
+    if (aadMatch) {
+      var aadDigits = aadMatch[0].replace(/\s/g, "");
+      var maskedUid = "XXXX XXXX " + aadDigits.slice(-4);
+      trace("identity_fraud", "aadhaar OTP requested → linked mobile (" + maskedUid + ")");
+      await wait(480);
+      if (verhoeffValid(aadDigits)) {
+        trace("identity_fraud", "aadhaar OTP 123456 verified → ret=y (" + maskedUid + ")", "ok");
+        vars.aadhaar = { ret: "y", masked: maskedUid };
+        aadRows += kvRow("Aadhaar (UIDAI)", "verified · ret=y", "good")
+                 + kvRow("Aadhaar UID", maskedUid, "info")
+                 + kvRow("Verhoeff / OTP", "pass / 123456", "good");
+        if (vars.identity.outcome !== "REJECTED" && !vars.identity.rule) vars.identity.rule = "AADHAAR-001";
+      } else {
+        trace("identity_fraud", "aadhaar Verhoeff FAILED → ret=n (err 998)", "no");
+        vars.aadhaar = { ret: "n" };
+        vars.identity.outcome = "REJECTED"; vars.identity.rule = "AADHAAR-002";
+        aadRows += kvRow("Aadhaar (UIDAI)", "rejected · err=998", "bad");
+      }
+    }
+
     var idState = vars.fraud.outcome === "REJECTED" ? "block" : vars.identity.outcome === "REJECTED" ? "block" : vars.identity.outcome === "NEEDS_REVIEW" ? "review" : "pass";
     setAgent("identity_fraud", idState, idState === "pass" ? "verified" : idState === "block" ? "rejected" : "review",
       '<b>' + vars.identity.outcome + '</b> · fraud ' + (isFraud ? "0.88" : "0.07"));
@@ -545,6 +580,7 @@
       idRows += kvRow("Google VC", vc.state, vc.state === "valid" ? "good" : vc.state === "invalid" ? "bad" : "warn");
       idRows += kvRow("VC issuer", vc.issuer, vc.verified ? "good" : "warn");
     }
+    idRows += aadRows;
     idRows += kvRow("Identity outcome", vars.identity.outcome, vars.identity.outcome === "APPROVED" ? "good" : vars.identity.outcome === "REJECTED" ? "bad" : "warn");
     $("idOut").innerHTML = idRows;
     trace("identity_fraud", "kyc=" + kyc + " fraud=" + fraudScore.toFixed(2) + (vc ? " vc=" + vc.state + " (" + vc.rule + ")" : "") + " → " + vars.identity.outcome,
