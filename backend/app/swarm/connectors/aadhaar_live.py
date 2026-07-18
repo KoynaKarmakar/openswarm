@@ -80,21 +80,31 @@ def pid_hmac(session_key: bytes, ts: str, pid_bytes: bytes) -> str:
     return base64.b64encode(aes_gcm_encrypt(session_key, ts, digest)).decode()
 
 
-def encrypt_session_key(public_cert_pem: bytes, session_key: bytes) -> str:
-    """Skey: base64( RSA-encrypt(UIDAI public key, session key) ) (PKCS1 v1.5)."""
+def load_certificate(data: bytes):
+    """
+    Load an X.509 cert from PEM or DER bytes. Real UIDAI .cer files are DER;
+    many mirrors ship PEM — accept either so a downloaded cert just works.
+    """
     from cryptography import x509
+
+    try:
+        return x509.load_pem_x509_certificate(data)
+    except ValueError:
+        return x509.load_der_x509_certificate(data)
+
+
+def encrypt_session_key(public_cert: bytes, session_key: bytes) -> str:
+    """Skey: base64( RSA-encrypt(UIDAI public key, session key) ) (PKCS1 v1.5)."""
     from cryptography.hazmat.primitives.asymmetric import padding
 
-    cert = x509.load_pem_x509_certificate(public_cert_pem)
+    cert = load_certificate(public_cert)
     encrypted = cert.public_key().encrypt(session_key, padding.PKCS1v15())
     return base64.b64encode(encrypted).decode()
 
 
-def cert_expiry_id(public_cert_pem: bytes) -> str:
+def cert_expiry_id(public_cert: bytes) -> str:
     """UIDAI Skey 'ci' attribute — the cert's expiry date as YYYYMMDD."""
-    from cryptography import x509
-
-    cert = x509.load_pem_x509_certificate(public_cert_pem)
+    cert = load_certificate(public_cert)
     # not_valid_after_utc (cryptography>=42) is preferred; fall back to the
     # deprecated naive not_valid_after on older versions.
     expiry = getattr(cert, "not_valid_after_utc", None) or cert.not_valid_after
