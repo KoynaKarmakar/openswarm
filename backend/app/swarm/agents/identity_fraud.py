@@ -154,13 +154,15 @@ class IdentityFraudAgent:
                 otp=ctx.extra_context.get("aadhaar_otp"),
                 txn=ctx.request_id or "veritas",
             )
-        except NotImplementedError as exc:
-            # LIVE mode intentionally refuses to transmit → route to human review.
-            ctx.log("identity_fraud/aadhaar: LIVE mode not performed — routing to review")
-            logger.warning("Aadhaar LIVE auth refused: %s", exc)
+        except Exception as exc:  # noqa: BLE001 — live refusal / misconfig / network
+            # LIVE not performed or transient error → route to human review,
+            # never crash the swarm. (Raw UID is not in the message.)
+            ctx.log("identity_fraud/aadhaar: verification unavailable — routing to review")
+            logger.warning("Aadhaar auth unavailable: %s: %s", type(exc).__name__, exc)
             identity = dict(ctx.get("identity_result") or {})
             details = dict(identity.get("details") or {})
-            details["aadhaar_auth"] = {"ret": "n", "mode": "live", "err": "live-not-authorized"}
+            details["aadhaar_auth"] = {"ret": "n", "mode": self._aadhaar.config.mode,
+                                       "err": "auth-unavailable"}
             if identity.get("outcome") == "APPROVED":
                 identity["outcome"] = "NEEDS_REVIEW"
                 identity["rule_id"] = "AADHAAR-003"

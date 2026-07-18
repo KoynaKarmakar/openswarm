@@ -169,8 +169,15 @@ class AadhaarAuthConnector:
                  licensed-AUA seam. It does not call auth.uidai.gov.in.
     """
 
-    def __init__(self, config: AuaConfig | None = None):
+    def __init__(self, config: AuaConfig | None = None, live_client=None):
+        """
+        config      : AuaConfig (mode "demo"|"live").
+        live_client : optional AadhaarLiveClient. In "live" mode, if provided and
+                      fully configured, the connector transmits via it; otherwise
+                      live mode refuses (never silently downgrades to demo).
+        """
         self.config = config or AuaConfig()
+        self._live_client = live_client
 
     # ── public API ────────────────────────────────────────────────────────────
     def verify(
@@ -242,27 +249,41 @@ class AadhaarAuthConnector:
             masked_uid=masked, mode="demo", checks=checks,
         )
 
-    # ── live path (intentionally does not transmit) ───────────────────────────
+    # ── live path ─────────────────────────────────────────────────────────────
     def _verify_live(self, digits, *, name, yob, otp, txn, checks) -> AadhaarAuthResult:
-        # Build the request envelope so the shape is real and reviewable...
-        envelope = self.build_auth_envelope(digits, name=name, yob=yob, otp=otp, txn=txn)
-        checks["envelope_built"] = bool(envelope)
-        missing = [
-            field_name for field_name, val in (
-                ("license_key", self.config.license_key),
-                ("asa_license_key", self.config.asa_license_key),
-                ("public_cert_path", self.config.public_cert_path),
-                ("identity_p12_path", self.config.identity_p12_path),
-            ) if not val
-        ]
-        # ...then refuse to send. Live UIDAI auth requires a licensed AUA/ASA.
+        masked = mask_aadhaar(digits)
+
+        # With a configured live client, actually transmit (sandbox/test numbers
+        # only, inside a licensed deployment).
+        if self._live_client is not None:
+            from datetime import datetime, timezone
+
+            ts = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S")
+            resp = self._live_client.authenticate(
+                digits, ts=ts, otp=otp, name=name,
+                dob=(f"{yob}" if yob else None), txn=txn,
+            )
+            ret = (resp.get("ret") or "n").lower()
+            err = resp.get("err")
+            checks["transmitted"] = True
+            return AadhaarAuthResult(
+                ret="y" if ret == "y" else "n",
+                txn=resp.get("txn") or txn,
+                code=resp.get("code") or "",
+                err=err,
+                err_text=UIDAI_ERR.get(err) if err else None,
+                masked_uid=masked, mode="live", checks=checks,
+            )
+
+        # No live client wired → build the envelope (shape only) and refuse.
+        checks["envelope_built"] = bool(
+            self.build_auth_envelope(digits, name=name, yob=yob, otp=otp, txn=txn)
+        )
         raise NotImplementedError(
-            "LIVE Aadhaar auth is not performed by this connector. Transmitting a "
-            "real Aadhaar to auth.uidai.gov.in requires a UIDAI-licensed AUA/KUA "
-            "(registered license key + ASA route + approved certs). "
-            f"Missing config: {missing or 'none'}. Implement the POST to "
-            "self.config.asa_endpoint here only within a licensed, authorized "
-            "deployment — do not point this at real Aadhaar numbers otherwise."
+            "LIVE Aadhaar auth requires a configured AadhaarLiveClient AND a "
+            "UIDAI-licensed AUA/KUA (license key + ASA route + approved certs). "
+            "Pass live_client=AadhaarLiveClient(config) and run only in an "
+            "authorized deployment — never against real Aadhaar numbers otherwise."
         )
 
     # ── request-shape helpers (mirror UIDAI Auth 2.5) ─────────────────────────

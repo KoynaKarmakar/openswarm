@@ -7,6 +7,10 @@
 # it never points at real Aadhaar numbers on its own.
 #
 # Never commit a real license key, ASA key, or .p12 password.
+# auth.cfg (and *.p12/*.cer/*.pem) are gitignored. You can also supply every
+# secret via environment variables instead of this file (env wins):
+#   AUA_LICENSE_KEY, ASA_LICENSE_KEY, UIDAI_AUA_CODE, UIDAI_SUB_AUA,
+#   UIDAI_PUBLIC_CERT_PATH, AUA_P12_PATH, AUA_P12_PASSWORD, UIDAI_API_HOST
 
 [aua]
 mode = demo
