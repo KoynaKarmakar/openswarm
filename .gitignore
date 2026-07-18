@@ -1,0 +1,35 @@
+# --- Secrets — never commit real credentials ---
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# --- macOS ---
+.DS_Store
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+.pytest_cache/
+.venv/
+venv/
+backend/.venv/
+backend/results.json
+
+# --- Node / frontend ---
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+npm-debug.log*
+
+# --- Docker ---
+docker-compose.override.yml
+
+# --- IDE ---
+.vscode/
+.idea/
+
+# --- Logs ---
+*.log

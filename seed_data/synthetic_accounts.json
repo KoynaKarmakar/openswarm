@@ -1,0 +1,1312 @@
+[
+  {
+    "account_id": "ACC000010",
+    "customer_id": "CUST00001",
+    "account_number": "4224395797233",
+    "account_type": "SAVINGS",
+    "balance": 93866.34,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Chennai"
+  },
+  {
+    "account_id": "ACC000020",
+    "customer_id": "CUST00002",
+    "account_number": "2531297567947",
+    "account_type": "SAVINGS",
+    "balance": 1154.28,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Kolkata"
+  },
+  {
+    "account_id": "ACC000030",
+    "customer_id": "CUST00003",
+    "account_number": "3865425398414",
+    "account_type": "SAVINGS",
+    "balance": 6250.57,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Mumbai"
+  },
+  {
+    "account_id": "ACC000031",
+    "customer_id": "CUST00003",
+    "account_number": "7416330434746",
+    "account_type": "SAVINGS",
+    "balance": 43156.98,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Mumbai"
+  },
+  {
+    "account_id": "ACC000040",
+    "customer_id": "CUST00004",
+    "account_number": "446584632174",
+    "account_type": "FIXED_DEPOSIT",
+    "balance": 16301.09,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Chennai"
+  },
+  {
+    "account_id": "ACC000050",
+    "customer_id": "CUST00005",
+    "account_number": "9567907603085",
+    "account_type": "FIXED_DEPOSIT",
+    "balance": 12741.5,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Kolkata"
+  },
+  {
+    "account_id": "ACC000060",
+    "customer_id": "CUST00006",
+    "account_number": "608891957439",
+    "account_type": "CURRENT",
+    "balance": 57431.07,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Delhi"
+  },
+  {
+    "account_id": "ACC000070",
+    "customer_id": "CUST00007",
+    "account_number": "9495766049657",
+    "account_type": "SAVINGS",
+    "balance": 16086.8,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Hyderabad"
+  },
+  {
+    "account_id": "ACC000071",
+    "customer_id": "CUST00007",
+    "account_number": "579588932135",
+    "account_type": "SAVINGS",
+    "balance": 779074.2,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Hyderabad"
+  },
+  {
+    "account_id": "ACC000080",
+    "customer_id": "CUST00008",
+    "account_number": "3297438647965",
+    "account_type": "SAVINGS",
+    "balance": 91583.84,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Kolkata"
+  },
+  {
+    "account_id": "ACC000090",
+    "customer_id": "CUST00009",
+    "account_number": "5848619160793",
+    "account_type": "SAVINGS",
+    "balance": 23919.51,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Pune"
+  },
+  {
+    "account_id": "ACC000091",
+    "customer_id": "CUST00009",
+    "account_number": "7516686640498",
+    "account_type": "SAVINGS",
+    "balance": 176786.89,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Pune"
+  },
+  {
+    "account_id": "ACC000100",
+    "customer_id": "CUST00010",
+    "account_number": "9590799791560",
+    "account_type": "SAVINGS",
+    "balance": 304682.02,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Chennai"
+  },
+  {
+    "account_id": "ACC000101",
+    "customer_id": "CUST00010",
+    "account_number": "807173901475",
+    "account_type": "SAVINGS",
+    "balance": 350144.45,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Chennai"
+  },
+  {
+    "account_id": "ACC000110",
+    "customer_id": "CUST00011",
+    "account_number": "8278553882171",
+    "account_type": "SAVINGS",
+    "balance": 3262.01,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Kolkata"
+  },
+  {
+    "account_id": "ACC000120",
+    "customer_id": "CUST00012",
+    "account_number": "2981146960064",
+    "account_type": "SAVINGS",
+    "balance": 136663.86,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Pune"
+  },
+  {
+    "account_id": "ACC000130",
+    "customer_id": "CUST00013",
+    "account_number": "6705480054946",
+    "account_type": "CURRENT",
+    "balance": 13363.46,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Bangalore"
+  },
+  {
+    "account_id": "ACC000140",
+    "customer_id": "CUST00014",
+    "account_number": "1892044392593",
+    "account_type": "SAVINGS",
+    "balance": 242507.94,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Hyderabad"
+  },
+  {
+    "account_id": "ACC000150",
+    "customer_id": "CUST00015",
+    "account_number": "824915898950",
+    "account_type": "SAVINGS",
+    "balance": 571396.14,
+    "is_frozen": false,
+    "kyc_status": "EXPIRED",
+    "home_city": "Pune"
+  },
+  {
+    "account_id": "ACC000160",
+    "customer_id": "CUST00016",
+    "account_number": "8999468404233",
+    "account_type": "SAVINGS",
+    "balance": 76798.97,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Pune"
+  },
+  {
+    "account_id": "ACC000170",
+    "customer_id": "CUST00017",
+    "account_number": "1957531272173",
+    "account_type": "CURRENT",
+    "balance": 6888.17,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Pune"
+  },
+  {
+    "account_id": "ACC000171",
+    "customer_id": "CUST00017",
+    "account_number": "3198541823466",
+    "account_type": "FIXED_DEPOSIT",
+    "balance": 1077266.84,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Pune"
+  },
+  {
+    "account_id": "ACC000180",
+    "customer_id": "CUST00018",
+    "account_number": "8279694337567",
+    "account_type": "CURRENT",
+    "balance": 308972.23,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Bangalore"
+  },
+  {
+    "account_id": "ACC000190",
+    "customer_id": "CUST00019",
+    "account_number": "1624432593212",
+    "account_type": "SAVINGS",
+    "balance": 468283.54,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Hyderabad"
+  },
+  {
+    "account_id": "ACC000191",
+    "customer_id": "CUST00019",
+    "account_number": "6015797713259",
+    "account_type": "SAVINGS",
+    "balance": 219426.18,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Hyderabad"
+  },
+  {
+    "account_id": "ACC000200",
+    "customer_id": "CUST00020",
+    "account_number": "3830125623965",
+    "account_type": "SAVINGS",
+    "balance": 58588.54,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Pune"
+  },
+  {
+    "account_id": "ACC000210",
+    "customer_id": "CUST00021",
+    "account_number": "9876532130193",
+    "account_type": "SAVINGS",
+    "balance": 191343.02,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Delhi"
+  },
+  {
+    "account_id": "ACC000220",
+    "customer_id": "CUST00022",
+    "account_number": "8695975154787",
+    "account_type": "FIXED_DEPOSIT",
+    "balance": 63126.26,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Bangalore"
+  },
+  {
+    "account_id": "ACC000221",
+    "customer_id": "CUST00022",
+    "account_number": "7983373049733",
+    "account_type": "SAVINGS",
+    "balance": 512589.25,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Bangalore"
+  },
+  {
+    "account_id": "ACC000230",
+    "customer_id": "CUST00023",
+    "account_number": "4380758630029",
+    "account_type": "SAVINGS",
+    "balance": 15594.79,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Kolkata"
+  },
+  {
+    "account_id": "ACC000240",
+    "customer_id": "CUST00024",
+    "account_number": "9439636049734",
+    "account_type": "SAVINGS",
+    "balance": 116852.74,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Mumbai"
+  },
+  {
+    "account_id": "ACC000241",
+    "customer_id": "CUST00024",
+    "account_number": "6290468611355",
+    "account_type": "CURRENT",
+    "balance": 28154.59,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Mumbai"
+  },
+  {
+    "account_id": "ACC000250",
+    "customer_id": "CUST00025",
+    "account_number": "5649924889665",
+    "account_type": "SAVINGS",
+    "balance": 27242.34,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Pune"
+  },
+  {
+    "account_id": "ACC000260",
+    "customer_id": "CUST00026",
+    "account_number": "8620092430792",
+    "account_type": "SAVINGS",
+    "balance": 109675.66,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Hyderabad"
+  },
+  {
+    "account_id": "ACC000270",
+    "customer_id": "CUST00027",
+    "account_number": "5310629058713",
+    "account_type": "SAVINGS",
+    "balance": 65409.37,
+    "is_frozen": true,
+    "kyc_status": "REJECTED",
+    "home_city": "Hyderabad"
+  },
+  {
+    "account_id": "ACC000280",
+    "customer_id": "CUST00028",
+    "account_number": "9496134392590",
+    "account_type": "SAVINGS",
+    "balance": 35843.54,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Pune"
+  },
+  {
+    "account_id": "ACC000290",
+    "customer_id": "CUST00029",
+    "account_number": "1905994572272",
+    "account_type": "SAVINGS",
+    "balance": 94257.67,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Pune"
+  },
+  {
+    "account_id": "ACC000300",
+    "customer_id": "CUST00030",
+    "account_number": "6093371177023",
+    "account_type": "SAVINGS",
+    "balance": 85750.13,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Chennai"
+  },
+  {
+    "account_id": "ACC000310",
+    "customer_id": "CUST00031",
+    "account_number": "8504657102924",
+    "account_type": "SAVINGS",
+    "balance": 297284.11,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Ahmedabad"
+  },
+  {
+    "account_id": "ACC000320",
+    "customer_id": "CUST00032",
+    "account_number": "2767404940033",
+    "account_type": "SAVINGS",
+    "balance": 238739.11,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Bangalore"
+  },
+  {
+    "account_id": "ACC000330",
+    "customer_id": "CUST00033",
+    "account_number": "4071205868098",
+    "account_type": "FIXED_DEPOSIT",
+    "balance": 14474.7,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Kolkata"
+  },
+  {
+    "account_id": "ACC000340",
+    "customer_id": "CUST00034",
+    "account_number": "5470550930119",
+    "account_type": "FIXED_DEPOSIT",
+    "balance": 2070.74,
+    "is_frozen": true,
+    "kyc_status": "REJECTED",
+    "home_city": "Hyderabad"
+  },
+  {
+    "account_id": "ACC000341",
+    "customer_id": "CUST00034",
+    "account_number": "1846935381557",
+    "account_type": "SAVINGS",
+    "balance": 132960.25,
+    "is_frozen": true,
+    "kyc_status": "REJECTED",
+    "home_city": "Hyderabad"
+  },
+  {
+    "account_id": "ACC000350",
+    "customer_id": "CUST00035",
+    "account_number": "2862012668852",
+    "account_type": "SAVINGS",
+    "balance": 92895.11,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Ahmedabad"
+  },
+  {
+    "account_id": "ACC000360",
+    "customer_id": "CUST00036",
+    "account_number": "5169055592133",
+    "account_type": "SAVINGS",
+    "balance": 84171.29,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Chennai"
+  },
+  {
+    "account_id": "ACC000370",
+    "customer_id": "CUST00037",
+    "account_number": "4208941030733",
+    "account_type": "SAVINGS",
+    "balance": 155863.03,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Chennai"
+  },
+  {
+    "account_id": "ACC000380",
+    "customer_id": "CUST00038",
+    "account_number": "3582933585277",
+    "account_type": "CURRENT",
+    "balance": 431668.61,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Chennai"
+  },
+  {
+    "account_id": "ACC000390",
+    "customer_id": "CUST00039",
+    "account_number": "1354741350632",
+    "account_type": "SAVINGS",
+    "balance": 16667.68,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Ahmedabad"
+  },
+  {
+    "account_id": "ACC000400",
+    "customer_id": "CUST00040",
+    "account_number": "7823590771261",
+    "account_type": "SAVINGS",
+    "balance": 17298.71,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Delhi"
+  },
+  {
+    "account_id": "ACC000410",
+    "customer_id": "CUST00041",
+    "account_number": "8901557277989",
+    "account_type": "FIXED_DEPOSIT",
+    "balance": 53329.94,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Ahmedabad"
+  },
+  {
+    "account_id": "ACC000420",
+    "customer_id": "CUST00042",
+    "account_number": "552046888046",
+    "account_type": "SAVINGS",
+    "balance": 58843.49,
+    "is_frozen": false,
+    "kyc_status": "PENDING",
+    "home_city": "Delhi"
+  },
+  {
+    "account_id": "ACC000421",
+    "customer_id": "CUST00042",
+    "account_number": "4840876904871",
+    "account_type": "FIXED_DEPOSIT",
+    "balance": 7032.49,
+    "is_frozen": false,
+    "kyc_status": "PENDING",
+    "home_city": "Delhi"
+  },
+  {
+    "account_id": "ACC000430",
+    "customer_id": "CUST00043",
+    "account_number": "4995902252800",
+    "account_type": "SAVINGS",
+    "balance": 48154.74,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Chennai"
+  },
+  {
+    "account_id": "ACC000440",
+    "customer_id": "CUST00044",
+    "account_number": "8753561289564",
+    "account_type": "SAVINGS",
+    "balance": 577745.17,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Hyderabad"
+  },
+  {
+    "account_id": "ACC000450",
+    "customer_id": "CUST00045",
+    "account_number": "5898896587094",
+    "account_type": "CURRENT",
+    "balance": 52552.36,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Delhi"
+  },
+  {
+    "account_id": "ACC000460",
+    "customer_id": "CUST00046",
+    "account_number": "7147805940798",
+    "account_type": "FIXED_DEPOSIT",
+    "balance": 120593.96,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Chennai"
+  },
+  {
+    "account_id": "ACC000470",
+    "customer_id": "CUST00047",
+    "account_number": "7211488942970",
+    "account_type": "FIXED_DEPOSIT",
+    "balance": 29123.66,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Mumbai"
+  },
+  {
+    "account_id": "ACC000480",
+    "customer_id": "CUST00048",
+    "account_number": "3398767688102",
+    "account_type": "FIXED_DEPOSIT",
+    "balance": 350330.7,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Ahmedabad"
+  },
+  {
+    "account_id": "ACC000490",
+    "customer_id": "CUST00049",
+    "account_number": "7876576915858",
+    "account_type": "SAVINGS",
+    "balance": 13899.87,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Ahmedabad"
+  },
+  {
+    "account_id": "ACC000491",
+    "customer_id": "CUST00049",
+    "account_number": "5167750766166",
+    "account_type": "CURRENT",
+    "balance": 11023.17,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Ahmedabad"
+  },
+  {
+    "account_id": "ACC000500",
+    "customer_id": "CUST00050",
+    "account_number": "4312500976436",
+    "account_type": "SAVINGS",
+    "balance": 401075.68,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Mumbai"
+  },
+  {
+    "account_id": "ACC000501",
+    "customer_id": "CUST00050",
+    "account_number": "8217975501245",
+    "account_type": "SAVINGS",
+    "balance": 44117.53,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Mumbai"
+  },
+  {
+    "account_id": "ACC000510",
+    "customer_id": "CUST00051",
+    "account_number": "9051965380718",
+    "account_type": "SAVINGS",
+    "balance": 93833.35,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Bangalore"
+  },
+  {
+    "account_id": "ACC000520",
+    "customer_id": "CUST00052",
+    "account_number": "4388405529931",
+    "account_type": "CURRENT",
+    "balance": 39331.16,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Delhi"
+  },
+  {
+    "account_id": "ACC000530",
+    "customer_id": "CUST00053",
+    "account_number": "2504663395981",
+    "account_type": "SAVINGS",
+    "balance": 74162.36,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Chennai"
+  },
+  {
+    "account_id": "ACC000531",
+    "customer_id": "CUST00053",
+    "account_number": "6080376640166",
+    "account_type": "FIXED_DEPOSIT",
+    "balance": 3858.78,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Chennai"
+  },
+  {
+    "account_id": "ACC000540",
+    "customer_id": "CUST00054",
+    "account_number": "8714243852433",
+    "account_type": "SAVINGS",
+    "balance": 2146033.65,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Pune"
+  },
+  {
+    "account_id": "ACC000550",
+    "customer_id": "CUST00055",
+    "account_number": "9808053907690",
+    "account_type": "FIXED_DEPOSIT",
+    "balance": 45855.73,
+    "is_frozen": false,
+    "kyc_status": "PENDING",
+    "home_city": "Hyderabad"
+  },
+  {
+    "account_id": "ACC000560",
+    "customer_id": "CUST00056",
+    "account_number": "3419449663319",
+    "account_type": "SAVINGS",
+    "balance": 541.5,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Pune"
+  },
+  {
+    "account_id": "ACC000570",
+    "customer_id": "CUST00057",
+    "account_number": "7327465930031",
+    "account_type": "SAVINGS",
+    "balance": 76195.56,
+    "is_frozen": false,
+    "kyc_status": "PENDING",
+    "home_city": "Delhi"
+  },
+  {
+    "account_id": "ACC000580",
+    "customer_id": "CUST00058",
+    "account_number": "6891980670292",
+    "account_type": "SAVINGS",
+    "balance": 24642.11,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Pune"
+  },
+  {
+    "account_id": "ACC000590",
+    "customer_id": "CUST00059",
+    "account_number": "5939395360910",
+    "account_type": "SAVINGS",
+    "balance": 59131.39,
+    "is_frozen": false,
+    "kyc_status": "PENDING",
+    "home_city": "Bangalore"
+  },
+  {
+    "account_id": "ACC000600",
+    "customer_id": "CUST00060",
+    "account_number": "368250463511",
+    "account_type": "SAVINGS",
+    "balance": 334504.88,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Mumbai"
+  },
+  {
+    "account_id": "ACC000601",
+    "customer_id": "CUST00060",
+    "account_number": "1414922968975",
+    "account_type": "CURRENT",
+    "balance": 30606.64,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Mumbai"
+  },
+  {
+    "account_id": "ACC000610",
+    "customer_id": "CUST00061",
+    "account_number": "6785261002965",
+    "account_type": "SAVINGS",
+    "balance": 160439.51,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Hyderabad"
+  },
+  {
+    "account_id": "ACC000620",
+    "customer_id": "CUST00062",
+    "account_number": "733683838605",
+    "account_type": "FIXED_DEPOSIT",
+    "balance": 1086842.09,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Hyderabad"
+  },
+  {
+    "account_id": "ACC000630",
+    "customer_id": "CUST00063",
+    "account_number": "1868979257948",
+    "account_type": "CURRENT",
+    "balance": 183846.2,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Hyderabad"
+  },
+  {
+    "account_id": "ACC000640",
+    "customer_id": "CUST00064",
+    "account_number": "907578179167",
+    "account_type": "SAVINGS",
+    "balance": 17578.78,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Kolkata"
+  },
+  {
+    "account_id": "ACC000650",
+    "customer_id": "CUST00065",
+    "account_number": "7677932240362",
+    "account_type": "SAVINGS",
+    "balance": 176036.09,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Hyderabad"
+  },
+  {
+    "account_id": "ACC000660",
+    "customer_id": "CUST00066",
+    "account_number": "3090070576468",
+    "account_type": "SAVINGS",
+    "balance": 19543.95,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Mumbai"
+  },
+  {
+    "account_id": "ACC000661",
+    "customer_id": "CUST00066",
+    "account_number": "4185128584434",
+    "account_type": "CURRENT",
+    "balance": 89838.74,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Mumbai"
+  },
+  {
+    "account_id": "ACC000670",
+    "customer_id": "CUST00067",
+    "account_number": "266072816329",
+    "account_type": "CURRENT",
+    "balance": 115455.71,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Mumbai"
+  },
+  {
+    "account_id": "ACC000671",
+    "customer_id": "CUST00067",
+    "account_number": "5363858538852",
+    "account_type": "CURRENT",
+    "balance": 12375.48,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Mumbai"
+  },
+  {
+    "account_id": "ACC000680",
+    "customer_id": "CUST00068",
+    "account_number": "3601695948928",
+    "account_type": "CURRENT",
+    "balance": 147506.61,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Bangalore"
+  },
+  {
+    "account_id": "ACC000690",
+    "customer_id": "CUST00069",
+    "account_number": "5295618841656",
+    "account_type": "SAVINGS",
+    "balance": 37188.98,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Chennai"
+  },
+  {
+    "account_id": "ACC000700",
+    "customer_id": "CUST00070",
+    "account_number": "4149290270938",
+    "account_type": "FIXED_DEPOSIT",
+    "balance": 15725.8,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Kolkata"
+  },
+  {
+    "account_id": "ACC000701",
+    "customer_id": "CUST00070",
+    "account_number": "5533302948126",
+    "account_type": "CURRENT",
+    "balance": 161915.78,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Kolkata"
+  },
+  {
+    "account_id": "ACC000710",
+    "customer_id": "CUST00071",
+    "account_number": "1685407341647",
+    "account_type": "SAVINGS",
+    "balance": 9039.93,
+    "is_frozen": true,
+    "kyc_status": "REJECTED",
+    "home_city": "Bangalore"
+  },
+  {
+    "account_id": "ACC000720",
+    "customer_id": "CUST00072",
+    "account_number": "2424439714229",
+    "account_type": "FIXED_DEPOSIT",
+    "balance": 27920.54,
+    "is_frozen": false,
+    "kyc_status": "PENDING",
+    "home_city": "Chennai"
+  },
+  {
+    "account_id": "ACC000730",
+    "customer_id": "CUST00073",
+    "account_number": "4619012308314",
+    "account_type": "CURRENT",
+    "balance": 275858.24,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Mumbai"
+  },
+  {
+    "account_id": "ACC000740",
+    "customer_id": "CUST00074",
+    "account_number": "6060857966032",
+    "account_type": "SAVINGS",
+    "balance": 329826.44,
+    "is_frozen": false,
+    "kyc_status": "PENDING",
+    "home_city": "Hyderabad"
+  },
+  {
+    "account_id": "ACC000750",
+    "customer_id": "CUST00075",
+    "account_number": "6536254648883",
+    "account_type": "SAVINGS",
+    "balance": 54823.35,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Chennai"
+  },
+  {
+    "account_id": "ACC000760",
+    "customer_id": "CUST00076",
+    "account_number": "4711387590360",
+    "account_type": "FIXED_DEPOSIT",
+    "balance": 71154.82,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Pune"
+  },
+  {
+    "account_id": "ACC000770",
+    "customer_id": "CUST00077",
+    "account_number": "2004265979267",
+    "account_type": "SAVINGS",
+    "balance": 25667.47,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Mumbai"
+  },
+  {
+    "account_id": "ACC000780",
+    "customer_id": "CUST00078",
+    "account_number": "9978180694102",
+    "account_type": "SAVINGS",
+    "balance": 49368.93,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Hyderabad"
+  },
+  {
+    "account_id": "ACC000781",
+    "customer_id": "CUST00078",
+    "account_number": "8268271261496",
+    "account_type": "SAVINGS",
+    "balance": 236185.53,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Hyderabad"
+  },
+  {
+    "account_id": "ACC000790",
+    "customer_id": "CUST00079",
+    "account_number": "5451689075691",
+    "account_type": "CURRENT",
+    "balance": 92481.42,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Pune"
+  },
+  {
+    "account_id": "ACC000791",
+    "customer_id": "CUST00079",
+    "account_number": "2486015594370",
+    "account_type": "CURRENT",
+    "balance": 16465.97,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Pune"
+  },
+  {
+    "account_id": "ACC000800",
+    "customer_id": "CUST00080",
+    "account_number": "9604530586520",
+    "account_type": "CURRENT",
+    "balance": 41688.78,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Chennai"
+  },
+  {
+    "account_id": "ACC000810",
+    "customer_id": "CUST00081",
+    "account_number": "7400952259165",
+    "account_type": "SAVINGS",
+    "balance": 136224.7,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Chennai"
+  },
+  {
+    "account_id": "ACC000811",
+    "customer_id": "CUST00081",
+    "account_number": "676727092442",
+    "account_type": "SAVINGS",
+    "balance": 559135.69,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Chennai"
+  },
+  {
+    "account_id": "ACC000820",
+    "customer_id": "CUST00082",
+    "account_number": "1845314446874",
+    "account_type": "SAVINGS",
+    "balance": 16152.36,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Pune"
+  },
+  {
+    "account_id": "ACC000821",
+    "customer_id": "CUST00082",
+    "account_number": "1166692381848",
+    "account_type": "CURRENT",
+    "balance": 10470901.47,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Pune"
+  },
+  {
+    "account_id": "ACC000830",
+    "customer_id": "CUST00083",
+    "account_number": "477832968774",
+    "account_type": "SAVINGS",
+    "balance": 15778.29,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Hyderabad"
+  },
+  {
+    "account_id": "ACC000831",
+    "customer_id": "CUST00083",
+    "account_number": "3710197372591",
+    "account_type": "SAVINGS",
+    "balance": 158838.34,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Hyderabad"
+  },
+  {
+    "account_id": "ACC000840",
+    "customer_id": "CUST00084",
+    "account_number": "3899269585850",
+    "account_type": "SAVINGS",
+    "balance": 401852.75,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Bangalore"
+  },
+  {
+    "account_id": "ACC000841",
+    "customer_id": "CUST00084",
+    "account_number": "4974800059555",
+    "account_type": "SAVINGS",
+    "balance": 35684.44,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Bangalore"
+  },
+  {
+    "account_id": "ACC000850",
+    "customer_id": "CUST00085",
+    "account_number": "554692931430",
+    "account_type": "SAVINGS",
+    "balance": 141922.05,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Bangalore"
+  },
+  {
+    "account_id": "ACC000851",
+    "customer_id": "CUST00085",
+    "account_number": "4765082865198",
+    "account_type": "SAVINGS",
+    "balance": 22086.81,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Bangalore"
+  },
+  {
+    "account_id": "ACC000860",
+    "customer_id": "CUST00086",
+    "account_number": "8475459206885",
+    "account_type": "CURRENT",
+    "balance": 11399.09,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Hyderabad"
+  },
+  {
+    "account_id": "ACC000870",
+    "customer_id": "CUST00087",
+    "account_number": "8050452848300",
+    "account_type": "FIXED_DEPOSIT",
+    "balance": 260341.85,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Pune"
+  },
+  {
+    "account_id": "ACC000871",
+    "customer_id": "CUST00087",
+    "account_number": "9272585144118",
+    "account_type": "SAVINGS",
+    "balance": 9305.46,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Pune"
+  },
+  {
+    "account_id": "ACC000880",
+    "customer_id": "CUST00088",
+    "account_number": "7600737831793",
+    "account_type": "SAVINGS",
+    "balance": 2977.03,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Ahmedabad"
+  },
+  {
+    "account_id": "ACC000881",
+    "customer_id": "CUST00088",
+    "account_number": "5765408855900",
+    "account_type": "FIXED_DEPOSIT",
+    "balance": 45373.69,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Ahmedabad"
+  },
+  {
+    "account_id": "ACC000890",
+    "customer_id": "CUST00089",
+    "account_number": "9749010668993",
+    "account_type": "SAVINGS",
+    "balance": 21255.54,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Delhi"
+  },
+  {
+    "account_id": "ACC000891",
+    "customer_id": "CUST00089",
+    "account_number": "8081315812156",
+    "account_type": "FIXED_DEPOSIT",
+    "balance": 27967.38,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Delhi"
+  },
+  {
+    "account_id": "ACC000900",
+    "customer_id": "CUST00090",
+    "account_number": "2113058814176",
+    "account_type": "FIXED_DEPOSIT",
+    "balance": 80915.67,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Delhi"
+  },
+  {
+    "account_id": "ACC000910",
+    "customer_id": "CUST00091",
+    "account_number": "7376655971860",
+    "account_type": "SAVINGS",
+    "balance": 123494.5,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Chennai"
+  },
+  {
+    "account_id": "ACC000920",
+    "customer_id": "CUST00092",
+    "account_number": "1773875940025",
+    "account_type": "SAVINGS",
+    "balance": 243111.71,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Delhi"
+  },
+  {
+    "account_id": "ACC000921",
+    "customer_id": "CUST00092",
+    "account_number": "8444790679381",
+    "account_type": "SAVINGS",
+    "balance": 34107.03,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Delhi"
+  },
+  {
+    "account_id": "ACC000930",
+    "customer_id": "CUST00093",
+    "account_number": "9884494341906",
+    "account_type": "SAVINGS",
+    "balance": 30141.23,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Kolkata"
+  },
+  {
+    "account_id": "ACC000940",
+    "customer_id": "CUST00094",
+    "account_number": "7324659971233",
+    "account_type": "SAVINGS",
+    "balance": 99460.05,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Kolkata"
+  },
+  {
+    "account_id": "ACC000950",
+    "customer_id": "CUST00095",
+    "account_number": "6286094864049",
+    "account_type": "SAVINGS",
+    "balance": 5673.72,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Mumbai"
+  },
+  {
+    "account_id": "ACC000960",
+    "customer_id": "CUST00096",
+    "account_number": "8585381070531",
+    "account_type": "SAVINGS",
+    "balance": 77241.29,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Bangalore"
+  },
+  {
+    "account_id": "ACC000970",
+    "customer_id": "CUST00097",
+    "account_number": "6566314922497",
+    "account_type": "SAVINGS",
+    "balance": 236823.66,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Pune"
+  },
+  {
+    "account_id": "ACC000971",
+    "customer_id": "CUST00097",
+    "account_number": "7649724528460",
+    "account_type": "FIXED_DEPOSIT",
+    "balance": 292630.39,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Pune"
+  },
+  {
+    "account_id": "ACC000980",
+    "customer_id": "CUST00098",
+    "account_number": "607954820162",
+    "account_type": "SAVINGS",
+    "balance": 135666.95,
+    "is_frozen": true,
+    "kyc_status": "REJECTED",
+    "home_city": "Kolkata"
+  },
+  {
+    "account_id": "ACC000981",
+    "customer_id": "CUST00098",
+    "account_number": "6078257482247",
+    "account_type": "SAVINGS",
+    "balance": 5137.59,
+    "is_frozen": true,
+    "kyc_status": "REJECTED",
+    "home_city": "Kolkata"
+  },
+  {
+    "account_id": "ACC000990",
+    "customer_id": "CUST00099",
+    "account_number": "1710744407246",
+    "account_type": "FIXED_DEPOSIT",
+    "balance": 79603.35,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Ahmedabad"
+  },
+  {
+    "account_id": "ACC000991",
+    "customer_id": "CUST00099",
+    "account_number": "2867423075734",
+    "account_type": "SAVINGS",
+    "balance": 16924.07,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Ahmedabad"
+  },
+  {
+    "account_id": "ACC001000",
+    "customer_id": "CUST00100",
+    "account_number": "1592914413340",
+    "account_type": "SAVINGS",
+    "balance": 29218.7,
+    "is_frozen": false,
+    "kyc_status": "VERIFIED",
+    "home_city": "Ahmedabad"
+  }
+]

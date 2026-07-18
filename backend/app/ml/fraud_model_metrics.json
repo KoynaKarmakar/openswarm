@@ -1,0 +1,106 @@
+{
+  "model_type": "XGBoostClassifier",
+  "feature_columns": [
+    "amount",
+    "hour_of_day",
+    "day_of_week",
+    "txn_type_idx",
+    "is_geo_mismatch",
+    "velocity_1h",
+    "amount_zscore",
+    "is_new_merchant",
+    "balance_ratio",
+    "risk_tier_enc",
+    "kyc_verified",
+    "account_type_enc",
+    "is_frozen_acc"
+  ],
+  "n_features": 13,
+  "total_samples": 1200,
+  "fraud_n": 120,
+  "legit_n": 1080,
+  "fraud_ratio_pct": 10.0,
+  "oof_precision": 1.0,
+  "oof_recall": 1.0,
+  "oof_f1_score": 1.0,
+  "oof_auc_roc": 1.0,
+  "cv_folds": [
+    {
+      "fold": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "auc_roc": 1.0,
+      "test_n": 240,
+      "test_fraud_n": 24
+    },
+    {
+      "fold": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "auc_roc": 1.0,
+      "test_n": 240,
+      "test_fraud_n": 24
+    },
+    {
+      "fold": 3,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "auc_roc": 1.0,
+      "test_n": 240,
+      "test_fraud_n": 24
+    },
+    {
+      "fold": 4,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "auc_roc": 1.0,
+      "test_n": 240,
+      "test_fraud_n": 24
+    },
+    {
+      "fold": 5,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "auc_roc": 1.0,
+      "test_n": 240,
+      "test_fraud_n": 24
+    }
+  ],
+  "cv_mean_precision": 1.0,
+  "cv_std_precision": 0.0,
+  "cv_mean_recall": 1.0,
+  "cv_std_recall": 0.0,
+  "cv_mean_f1": 1.0,
+  "cv_std_f1": 0.0,
+  "cv_mean_auc": 1.0,
+  "cv_std_auc": 0.0,
+  "feature_importances": {
+    "amount": 0.0,
+    "hour_of_day": 0.0,
+    "day_of_week": 0.0,
+    "txn_type_idx": 0.0,
+    "is_geo_mismatch": 0.0,
+    "velocity_1h": 1.0,
+    "amount_zscore": 0.0,
+    "is_new_merchant": 0.0,
+    "balance_ratio": 0.0,
+    "risk_tier_enc": 0.0,
+    "kyc_verified": 0.0,
+    "account_type_enc": 0.0,
+    "is_frozen_acc": 0.0
+  },
+  "top_features": [
+    "velocity_1h",
+    "amount",
+    "hour_of_day",
+    "day_of_week",
+    "txn_type_idx"
+  ],
+  "trained_at": "2026-07-12T12:20:36.297926+00:00",
+  "evaluation_note": "Metrics from 5-fold stratified cross-validation (OOF predictions). Features include enriched account+customer attributes joined at training time. Synthetic data with engineered separators \u2014 real-world fraud is harder."
+}

@@ -1,0 +1,1333 @@
+[
+  {
+    "customer_id": "CUST00001",
+    "full_name_redacted": "A.A.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-09-04T12:20:34.488213+00:00",
+    "kyc_expires_at": "2027-09-04T12:20:34.488333+00:00",
+    "risk_tier": "A",
+    "city": "Chennai",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000010"
+    ]
+  },
+  {
+    "customer_id": "CUST00002",
+    "full_name_redacted": "B.A.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2024-12-01T12:20:34.488349+00:00",
+    "kyc_expires_at": "2026-12-01T12:20:34.488351+00:00",
+    "risk_tier": "A",
+    "city": "Kolkata",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000020"
+    ]
+  },
+  {
+    "customer_id": "CUST00003",
+    "full_name_redacted": "C.A.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-10-17T12:20:34.488358+00:00",
+    "kyc_expires_at": "2027-10-17T12:20:34.488359+00:00",
+    "risk_tier": "A",
+    "city": "Mumbai",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000030",
+      "ACC000031"
+    ]
+  },
+  {
+    "customer_id": "CUST00004",
+    "full_name_redacted": "D.A.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2024-12-01T12:20:34.488366+00:00",
+    "kyc_expires_at": "2026-12-01T12:20:34.488367+00:00",
+    "risk_tier": "B",
+    "city": "Chennai",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000040"
+    ]
+  },
+  {
+    "customer_id": "CUST00005",
+    "full_name_redacted": "E.A.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2026-06-06T12:20:34.488372+00:00",
+    "kyc_expires_at": "2028-06-05T12:20:34.488373+00:00",
+    "risk_tier": "A",
+    "city": "Kolkata",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000050"
+    ]
+  },
+  {
+    "customer_id": "CUST00006",
+    "full_name_redacted": "F.A.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-07-03T12:20:34.488378+00:00",
+    "kyc_expires_at": "2027-07-03T12:20:34.488379+00:00",
+    "risk_tier": "A",
+    "city": "Delhi",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000060"
+    ]
+  },
+  {
+    "customer_id": "CUST00007",
+    "full_name_redacted": "G.A.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-06-25T12:20:34.488384+00:00",
+    "kyc_expires_at": "2027-06-25T12:20:34.488385+00:00",
+    "risk_tier": "A",
+    "city": "Hyderabad",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000070",
+      "ACC000071"
+    ]
+  },
+  {
+    "customer_id": "CUST00008",
+    "full_name_redacted": "H.A.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2024-12-10T12:20:34.488389+00:00",
+    "kyc_expires_at": "2026-12-10T12:20:34.488390+00:00",
+    "risk_tier": "B",
+    "city": "Kolkata",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000080"
+    ]
+  },
+  {
+    "customer_id": "CUST00009",
+    "full_name_redacted": "I.A.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2024-09-07T12:20:34.488394+00:00",
+    "kyc_expires_at": "2026-09-07T12:20:34.488395+00:00",
+    "risk_tier": "A",
+    "city": "Pune",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000090",
+      "ACC000091"
+    ]
+  },
+  {
+    "customer_id": "CUST00010",
+    "full_name_redacted": "J.A.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2026-04-27T12:20:34.488399+00:00",
+    "kyc_expires_at": "2028-04-26T12:20:34.488400+00:00",
+    "risk_tier": "B",
+    "city": "Chennai",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000100",
+      "ACC000101"
+    ]
+  },
+  {
+    "customer_id": "CUST00011",
+    "full_name_redacted": "K.A.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-10-17T12:20:34.488404+00:00",
+    "kyc_expires_at": "2027-10-17T12:20:34.488405+00:00",
+    "risk_tier": "D",
+    "city": "Kolkata",
+    "co_lending_eligible": false,
+    "account_ids": [
+      "ACC000110"
+    ]
+  },
+  {
+    "customer_id": "CUST00012",
+    "full_name_redacted": "L.A.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-06-04T12:20:34.488409+00:00",
+    "kyc_expires_at": "2027-06-04T12:20:34.488410+00:00",
+    "risk_tier": "B",
+    "city": "Pune",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000120"
+    ]
+  },
+  {
+    "customer_id": "CUST00013",
+    "full_name_redacted": "M.A.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2024-08-18T12:20:34.488414+00:00",
+    "kyc_expires_at": "2026-08-18T12:20:34.488416+00:00",
+    "risk_tier": "B",
+    "city": "Bangalore",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000130"
+    ]
+  },
+  {
+    "customer_id": "CUST00014",
+    "full_name_redacted": "N.A.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-02-24T12:20:34.488420+00:00",
+    "kyc_expires_at": "2027-02-24T12:20:34.488421+00:00",
+    "risk_tier": "A",
+    "city": "Hyderabad",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000140"
+    ]
+  },
+  {
+    "customer_id": "CUST00015",
+    "full_name_redacted": "O.A.",
+    "kyc_status": "EXPIRED",
+    "kyc_verified_at": "2024-11-19T12:20:34.488424+00:00",
+    "kyc_expires_at": "2026-11-19T12:20:34.488425+00:00",
+    "risk_tier": "B",
+    "city": "Pune",
+    "co_lending_eligible": false,
+    "account_ids": [
+      "ACC000150"
+    ]
+  },
+  {
+    "customer_id": "CUST00016",
+    "full_name_redacted": "P.A.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-10-21T12:20:34.488429+00:00",
+    "kyc_expires_at": "2027-10-21T12:20:34.488430+00:00",
+    "risk_tier": "C",
+    "city": "Pune",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000160"
+    ]
+  },
+  {
+    "customer_id": "CUST00017",
+    "full_name_redacted": "Q.A.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2024-11-09T12:20:34.488433+00:00",
+    "kyc_expires_at": "2026-11-09T12:20:34.488434+00:00",
+    "risk_tier": "A",
+    "city": "Pune",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000170",
+      "ACC000171"
+    ]
+  },
+  {
+    "customer_id": "CUST00018",
+    "full_name_redacted": "R.A.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2024-08-23T12:20:34.488438+00:00",
+    "kyc_expires_at": "2026-08-23T12:20:34.488439+00:00",
+    "risk_tier": "B",
+    "city": "Bangalore",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000180"
+    ]
+  },
+  {
+    "customer_id": "CUST00019",
+    "full_name_redacted": "S.A.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2024-11-15T12:20:34.488443+00:00",
+    "kyc_expires_at": "2026-11-15T12:20:34.488444+00:00",
+    "risk_tier": "A",
+    "city": "Hyderabad",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000190",
+      "ACC000191"
+    ]
+  },
+  {
+    "customer_id": "CUST00020",
+    "full_name_redacted": "T.A.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2024-10-23T12:20:34.488447+00:00",
+    "kyc_expires_at": "2026-10-23T12:20:34.488448+00:00",
+    "risk_tier": "B",
+    "city": "Pune",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000200"
+    ]
+  },
+  {
+    "customer_id": "CUST00021",
+    "full_name_redacted": "U.A.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-01-07T12:20:34.488452+00:00",
+    "kyc_expires_at": "2027-01-07T12:20:34.488453+00:00",
+    "risk_tier": "D",
+    "city": "Delhi",
+    "co_lending_eligible": false,
+    "account_ids": [
+      "ACC000210"
+    ]
+  },
+  {
+    "customer_id": "CUST00022",
+    "full_name_redacted": "V.A.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2026-01-07T12:20:34.488456+00:00",
+    "kyc_expires_at": "2028-01-07T12:20:34.488458+00:00",
+    "risk_tier": "C",
+    "city": "Bangalore",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000220",
+      "ACC000221"
+    ]
+  },
+  {
+    "customer_id": "CUST00023",
+    "full_name_redacted": "W.A.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2026-04-08T12:20:34.488461+00:00",
+    "kyc_expires_at": "2028-04-07T12:20:34.488462+00:00",
+    "risk_tier": "B",
+    "city": "Kolkata",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000230"
+    ]
+  },
+  {
+    "customer_id": "CUST00024",
+    "full_name_redacted": "X.A.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-09-28T12:20:34.488466+00:00",
+    "kyc_expires_at": "2027-09-28T12:20:34.488467+00:00",
+    "risk_tier": "B",
+    "city": "Mumbai",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000240",
+      "ACC000241"
+    ]
+  },
+  {
+    "customer_id": "CUST00025",
+    "full_name_redacted": "Y.A.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2024-12-10T12:20:34.488471+00:00",
+    "kyc_expires_at": "2026-12-10T12:20:34.488472+00:00",
+    "risk_tier": "A",
+    "city": "Pune",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000250"
+    ]
+  },
+  {
+    "customer_id": "CUST00026",
+    "full_name_redacted": "Z.A.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-03-05T12:20:34.488475+00:00",
+    "kyc_expires_at": "2027-03-05T12:20:34.488476+00:00",
+    "risk_tier": "B",
+    "city": "Hyderabad",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000260"
+    ]
+  },
+  {
+    "customer_id": "CUST00027",
+    "full_name_redacted": "A.B.",
+    "kyc_status": "REJECTED",
+    "kyc_verified_at": null,
+    "kyc_expires_at": null,
+    "risk_tier": "C",
+    "city": "Hyderabad",
+    "co_lending_eligible": false,
+    "account_ids": [
+      "ACC000270"
+    ]
+  },
+  {
+    "customer_id": "CUST00028",
+    "full_name_redacted": "B.B.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-11-21T12:20:34.488483+00:00",
+    "kyc_expires_at": "2027-11-21T12:20:34.488484+00:00",
+    "risk_tier": "B",
+    "city": "Pune",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000280"
+    ]
+  },
+  {
+    "customer_id": "CUST00029",
+    "full_name_redacted": "C.B.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2024-12-16T12:20:34.488487+00:00",
+    "kyc_expires_at": "2026-12-16T12:20:34.488488+00:00",
+    "risk_tier": "B",
+    "city": "Pune",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000290"
+    ]
+  },
+  {
+    "customer_id": "CUST00030",
+    "full_name_redacted": "D.B.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-06-06T12:20:34.488492+00:00",
+    "kyc_expires_at": "2027-06-06T12:20:34.488493+00:00",
+    "risk_tier": "A",
+    "city": "Chennai",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000300"
+    ]
+  },
+  {
+    "customer_id": "CUST00031",
+    "full_name_redacted": "E.B.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2026-03-24T12:20:34.488497+00:00",
+    "kyc_expires_at": "2028-03-23T12:20:34.488498+00:00",
+    "risk_tier": "C",
+    "city": "Ahmedabad",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000310"
+    ]
+  },
+  {
+    "customer_id": "CUST00032",
+    "full_name_redacted": "F.B.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2024-12-14T12:20:34.488501+00:00",
+    "kyc_expires_at": "2026-12-14T12:20:34.488502+00:00",
+    "risk_tier": "D",
+    "city": "Bangalore",
+    "co_lending_eligible": false,
+    "account_ids": [
+      "ACC000320"
+    ]
+  },
+  {
+    "customer_id": "CUST00033",
+    "full_name_redacted": "G.B.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-12-25T12:20:34.488506+00:00",
+    "kyc_expires_at": "2027-12-25T12:20:34.488507+00:00",
+    "risk_tier": "C",
+    "city": "Kolkata",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000330"
+    ]
+  },
+  {
+    "customer_id": "CUST00034",
+    "full_name_redacted": "H.B.",
+    "kyc_status": "REJECTED",
+    "kyc_verified_at": null,
+    "kyc_expires_at": null,
+    "risk_tier": "C",
+    "city": "Hyderabad",
+    "co_lending_eligible": false,
+    "account_ids": [
+      "ACC000340",
+      "ACC000341"
+    ]
+  },
+  {
+    "customer_id": "CUST00035",
+    "full_name_redacted": "I.B.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-05-26T12:20:34.488513+00:00",
+    "kyc_expires_at": "2027-05-26T12:20:34.488514+00:00",
+    "risk_tier": "B",
+    "city": "Ahmedabad",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000350"
+    ]
+  },
+  {
+    "customer_id": "CUST00036",
+    "full_name_redacted": "J.B.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-07-01T12:20:34.488518+00:00",
+    "kyc_expires_at": "2027-07-01T12:20:34.488519+00:00",
+    "risk_tier": "A",
+    "city": "Chennai",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000360"
+    ]
+  },
+  {
+    "customer_id": "CUST00037",
+    "full_name_redacted": "K.B.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2024-09-04T12:20:34.488523+00:00",
+    "kyc_expires_at": "2026-09-04T12:20:34.488524+00:00",
+    "risk_tier": "A",
+    "city": "Chennai",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000370"
+    ]
+  },
+  {
+    "customer_id": "CUST00038",
+    "full_name_redacted": "L.B.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-07-09T12:20:34.488527+00:00",
+    "kyc_expires_at": "2027-07-09T12:20:34.488528+00:00",
+    "risk_tier": "A",
+    "city": "Chennai",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000380"
+    ]
+  },
+  {
+    "customer_id": "CUST00039",
+    "full_name_redacted": "M.B.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2024-12-07T12:20:34.488532+00:00",
+    "kyc_expires_at": "2026-12-07T12:20:34.488533+00:00",
+    "risk_tier": "B",
+    "city": "Ahmedabad",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000390"
+    ]
+  },
+  {
+    "customer_id": "CUST00040",
+    "full_name_redacted": "N.B.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-04-22T12:20:34.488536+00:00",
+    "kyc_expires_at": "2027-04-22T12:20:34.488537+00:00",
+    "risk_tier": "B",
+    "city": "Delhi",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000400"
+    ]
+  },
+  {
+    "customer_id": "CUST00041",
+    "full_name_redacted": "O.B.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-04-05T12:20:34.488540+00:00",
+    "kyc_expires_at": "2027-04-05T12:20:34.488541+00:00",
+    "risk_tier": "B",
+    "city": "Ahmedabad",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000410"
+    ]
+  },
+  {
+    "customer_id": "CUST00042",
+    "full_name_redacted": "P.B.",
+    "kyc_status": "PENDING",
+    "kyc_verified_at": null,
+    "kyc_expires_at": null,
+    "risk_tier": "A",
+    "city": "Delhi",
+    "co_lending_eligible": false,
+    "account_ids": [
+      "ACC000420",
+      "ACC000421"
+    ]
+  },
+  {
+    "customer_id": "CUST00043",
+    "full_name_redacted": "Q.B.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2026-02-21T12:20:34.488548+00:00",
+    "kyc_expires_at": "2028-02-21T12:20:34.488549+00:00",
+    "risk_tier": "B",
+    "city": "Chennai",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000430"
+    ]
+  },
+  {
+    "customer_id": "CUST00044",
+    "full_name_redacted": "R.B.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-04-06T12:20:34.488553+00:00",
+    "kyc_expires_at": "2027-04-06T12:20:34.488554+00:00",
+    "risk_tier": "B",
+    "city": "Hyderabad",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000440"
+    ]
+  },
+  {
+    "customer_id": "CUST00045",
+    "full_name_redacted": "S.B.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2026-03-27T12:20:34.488557+00:00",
+    "kyc_expires_at": "2028-03-26T12:20:34.488558+00:00",
+    "risk_tier": "C",
+    "city": "Delhi",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000450"
+    ]
+  },
+  {
+    "customer_id": "CUST00046",
+    "full_name_redacted": "T.B.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2026-05-28T12:20:34.488562+00:00",
+    "kyc_expires_at": "2028-05-27T12:20:34.488563+00:00",
+    "risk_tier": "D",
+    "city": "Chennai",
+    "co_lending_eligible": false,
+    "account_ids": [
+      "ACC000460"
+    ]
+  },
+  {
+    "customer_id": "CUST00047",
+    "full_name_redacted": "U.B.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-11-06T12:20:34.488566+00:00",
+    "kyc_expires_at": "2027-11-06T12:20:34.488567+00:00",
+    "risk_tier": "B",
+    "city": "Mumbai",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000470"
+    ]
+  },
+  {
+    "customer_id": "CUST00048",
+    "full_name_redacted": "V.B.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-05-09T12:20:34.488572+00:00",
+    "kyc_expires_at": "2027-05-09T12:20:34.488574+00:00",
+    "risk_tier": "A",
+    "city": "Ahmedabad",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000480"
+    ]
+  },
+  {
+    "customer_id": "CUST00049",
+    "full_name_redacted": "W.B.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2024-11-20T12:20:34.488578+00:00",
+    "kyc_expires_at": "2026-11-20T12:20:34.488579+00:00",
+    "risk_tier": "B",
+    "city": "Ahmedabad",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000490",
+      "ACC000491"
+    ]
+  },
+  {
+    "customer_id": "CUST00050",
+    "full_name_redacted": "X.B.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2026-04-14T12:20:34.488582+00:00",
+    "kyc_expires_at": "2028-04-13T12:20:34.488584+00:00",
+    "risk_tier": "A",
+    "city": "Mumbai",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000500",
+      "ACC000501"
+    ]
+  },
+  {
+    "customer_id": "CUST00051",
+    "full_name_redacted": "Y.B.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2024-10-22T12:20:34.488587+00:00",
+    "kyc_expires_at": "2026-10-22T12:20:34.488588+00:00",
+    "risk_tier": "A",
+    "city": "Bangalore",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000510"
+    ]
+  },
+  {
+    "customer_id": "CUST00052",
+    "full_name_redacted": "Z.B.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-12-04T12:20:34.488592+00:00",
+    "kyc_expires_at": "2027-12-04T12:20:34.488593+00:00",
+    "risk_tier": "B",
+    "city": "Delhi",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000520"
+    ]
+  },
+  {
+    "customer_id": "CUST00053",
+    "full_name_redacted": "A.C.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2026-02-10T12:20:34.488597+00:00",
+    "kyc_expires_at": "2028-02-10T12:20:34.488597+00:00",
+    "risk_tier": "A",
+    "city": "Chennai",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000530",
+      "ACC000531"
+    ]
+  },
+  {
+    "customer_id": "CUST00054",
+    "full_name_redacted": "B.C.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2026-03-21T12:20:34.488601+00:00",
+    "kyc_expires_at": "2028-03-20T12:20:34.488602+00:00",
+    "risk_tier": "A",
+    "city": "Pune",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000540"
+    ]
+  },
+  {
+    "customer_id": "CUST00055",
+    "full_name_redacted": "C.C.",
+    "kyc_status": "PENDING",
+    "kyc_verified_at": null,
+    "kyc_expires_at": null,
+    "risk_tier": "A",
+    "city": "Hyderabad",
+    "co_lending_eligible": false,
+    "account_ids": [
+      "ACC000550"
+    ]
+  },
+  {
+    "customer_id": "CUST00056",
+    "full_name_redacted": "D.C.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-08-09T12:20:34.488608+00:00",
+    "kyc_expires_at": "2027-08-09T12:20:34.488609+00:00",
+    "risk_tier": "B",
+    "city": "Pune",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000560"
+    ]
+  },
+  {
+    "customer_id": "CUST00057",
+    "full_name_redacted": "E.C.",
+    "kyc_status": "PENDING",
+    "kyc_verified_at": null,
+    "kyc_expires_at": null,
+    "risk_tier": "C",
+    "city": "Delhi",
+    "co_lending_eligible": false,
+    "account_ids": [
+      "ACC000570"
+    ]
+  },
+  {
+    "customer_id": "CUST00058",
+    "full_name_redacted": "F.C.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-09-14T12:20:34.488615+00:00",
+    "kyc_expires_at": "2027-09-14T12:20:34.488616+00:00",
+    "risk_tier": "A",
+    "city": "Pune",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000580"
+    ]
+  },
+  {
+    "customer_id": "CUST00059",
+    "full_name_redacted": "G.C.",
+    "kyc_status": "PENDING",
+    "kyc_verified_at": null,
+    "kyc_expires_at": null,
+    "risk_tier": "C",
+    "city": "Bangalore",
+    "co_lending_eligible": false,
+    "account_ids": [
+      "ACC000590"
+    ]
+  },
+  {
+    "customer_id": "CUST00060",
+    "full_name_redacted": "H.C.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-08-07T12:20:34.488622+00:00",
+    "kyc_expires_at": "2027-08-07T12:20:34.488623+00:00",
+    "risk_tier": "B",
+    "city": "Mumbai",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000600",
+      "ACC000601"
+    ]
+  },
+  {
+    "customer_id": "CUST00061",
+    "full_name_redacted": "I.C.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2026-02-26T12:20:34.488627+00:00",
+    "kyc_expires_at": "2028-02-26T12:20:34.488628+00:00",
+    "risk_tier": "B",
+    "city": "Hyderabad",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000610"
+    ]
+  },
+  {
+    "customer_id": "CUST00062",
+    "full_name_redacted": "J.C.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2024-11-23T12:20:34.488631+00:00",
+    "kyc_expires_at": "2026-11-23T12:20:34.488632+00:00",
+    "risk_tier": "A",
+    "city": "Hyderabad",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000620"
+    ]
+  },
+  {
+    "customer_id": "CUST00063",
+    "full_name_redacted": "K.C.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-06-26T12:20:34.488636+00:00",
+    "kyc_expires_at": "2027-06-26T12:20:34.488637+00:00",
+    "risk_tier": "A",
+    "city": "Hyderabad",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000630"
+    ]
+  },
+  {
+    "customer_id": "CUST00064",
+    "full_name_redacted": "L.C.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2026-04-21T12:20:34.488640+00:00",
+    "kyc_expires_at": "2028-04-20T12:20:34.488641+00:00",
+    "risk_tier": "A",
+    "city": "Kolkata",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000640"
+    ]
+  },
+  {
+    "customer_id": "CUST00065",
+    "full_name_redacted": "M.C.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-07-06T12:20:34.488645+00:00",
+    "kyc_expires_at": "2027-07-06T12:20:34.488646+00:00",
+    "risk_tier": "A",
+    "city": "Hyderabad",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000650"
+    ]
+  },
+  {
+    "customer_id": "CUST00066",
+    "full_name_redacted": "N.C.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-04-01T12:20:34.488650+00:00",
+    "kyc_expires_at": "2027-04-01T12:20:34.488651+00:00",
+    "risk_tier": "B",
+    "city": "Mumbai",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000660",
+      "ACC000661"
+    ]
+  },
+  {
+    "customer_id": "CUST00067",
+    "full_name_redacted": "O.C.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2026-01-11T12:20:34.488654+00:00",
+    "kyc_expires_at": "2028-01-11T12:20:34.488655+00:00",
+    "risk_tier": "C",
+    "city": "Mumbai",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000670",
+      "ACC000671"
+    ]
+  },
+  {
+    "customer_id": "CUST00068",
+    "full_name_redacted": "P.C.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2026-01-12T12:20:34.488659+00:00",
+    "kyc_expires_at": "2028-01-12T12:20:34.488660+00:00",
+    "risk_tier": "B",
+    "city": "Bangalore",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000680"
+    ]
+  },
+  {
+    "customer_id": "CUST00069",
+    "full_name_redacted": "Q.C.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2026-05-03T12:20:34.488664+00:00",
+    "kyc_expires_at": "2028-05-02T12:20:34.488665+00:00",
+    "risk_tier": "A",
+    "city": "Chennai",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000690"
+    ]
+  },
+  {
+    "customer_id": "CUST00070",
+    "full_name_redacted": "R.C.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-06-15T12:20:34.488668+00:00",
+    "kyc_expires_at": "2027-06-15T12:20:34.488669+00:00",
+    "risk_tier": "B",
+    "city": "Kolkata",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000700",
+      "ACC000701"
+    ]
+  },
+  {
+    "customer_id": "CUST00071",
+    "full_name_redacted": "S.C.",
+    "kyc_status": "REJECTED",
+    "kyc_verified_at": null,
+    "kyc_expires_at": null,
+    "risk_tier": "B",
+    "city": "Bangalore",
+    "co_lending_eligible": false,
+    "account_ids": [
+      "ACC000710"
+    ]
+  },
+  {
+    "customer_id": "CUST00072",
+    "full_name_redacted": "T.C.",
+    "kyc_status": "PENDING",
+    "kyc_verified_at": null,
+    "kyc_expires_at": null,
+    "risk_tier": "A",
+    "city": "Chennai",
+    "co_lending_eligible": false,
+    "account_ids": [
+      "ACC000720"
+    ]
+  },
+  {
+    "customer_id": "CUST00073",
+    "full_name_redacted": "U.C.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2026-02-22T12:20:34.488678+00:00",
+    "kyc_expires_at": "2028-02-22T12:20:34.488679+00:00",
+    "risk_tier": "C",
+    "city": "Mumbai",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000730"
+    ]
+  },
+  {
+    "customer_id": "CUST00074",
+    "full_name_redacted": "V.C.",
+    "kyc_status": "PENDING",
+    "kyc_verified_at": null,
+    "kyc_expires_at": null,
+    "risk_tier": "A",
+    "city": "Hyderabad",
+    "co_lending_eligible": false,
+    "account_ids": [
+      "ACC000740"
+    ]
+  },
+  {
+    "customer_id": "CUST00075",
+    "full_name_redacted": "W.C.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-10-27T12:20:34.488685+00:00",
+    "kyc_expires_at": "2027-10-27T12:20:34.488686+00:00",
+    "risk_tier": "C",
+    "city": "Chennai",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000750"
+    ]
+  },
+  {
+    "customer_id": "CUST00076",
+    "full_name_redacted": "X.C.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2026-04-02T12:20:34.488691+00:00",
+    "kyc_expires_at": "2028-04-01T12:20:34.488692+00:00",
+    "risk_tier": "A",
+    "city": "Pune",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000760"
+    ]
+  },
+  {
+    "customer_id": "CUST00077",
+    "full_name_redacted": "Y.C.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2024-12-10T12:20:34.488695+00:00",
+    "kyc_expires_at": "2026-12-10T12:20:34.488696+00:00",
+    "risk_tier": "A",
+    "city": "Mumbai",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000770"
+    ]
+  },
+  {
+    "customer_id": "CUST00078",
+    "full_name_redacted": "Z.C.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-12-12T12:20:34.488700+00:00",
+    "kyc_expires_at": "2027-12-12T12:20:34.488701+00:00",
+    "risk_tier": "D",
+    "city": "Hyderabad",
+    "co_lending_eligible": false,
+    "account_ids": [
+      "ACC000780",
+      "ACC000781"
+    ]
+  },
+  {
+    "customer_id": "CUST00079",
+    "full_name_redacted": "A.D.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-06-24T12:20:34.488705+00:00",
+    "kyc_expires_at": "2027-06-24T12:20:34.488706+00:00",
+    "risk_tier": "B",
+    "city": "Pune",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000790",
+      "ACC000791"
+    ]
+  },
+  {
+    "customer_id": "CUST00080",
+    "full_name_redacted": "B.D.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2026-02-14T12:20:34.488709+00:00",
+    "kyc_expires_at": "2028-02-14T12:20:34.488710+00:00",
+    "risk_tier": "D",
+    "city": "Chennai",
+    "co_lending_eligible": false,
+    "account_ids": [
+      "ACC000800"
+    ]
+  },
+  {
+    "customer_id": "CUST00081",
+    "full_name_redacted": "C.D.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2026-06-11T12:20:34.488714+00:00",
+    "kyc_expires_at": "2028-06-10T12:20:34.488715+00:00",
+    "risk_tier": "B",
+    "city": "Chennai",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000810",
+      "ACC000811"
+    ]
+  },
+  {
+    "customer_id": "CUST00082",
+    "full_name_redacted": "D.D.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-07-09T12:20:34.488718+00:00",
+    "kyc_expires_at": "2027-07-09T12:20:34.488719+00:00",
+    "risk_tier": "A",
+    "city": "Pune",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000820",
+      "ACC000821"
+    ]
+  },
+  {
+    "customer_id": "CUST00083",
+    "full_name_redacted": "E.D.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-08-09T12:20:34.488723+00:00",
+    "kyc_expires_at": "2027-08-09T12:20:34.488724+00:00",
+    "risk_tier": "A",
+    "city": "Hyderabad",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000830",
+      "ACC000831"
+    ]
+  },
+  {
+    "customer_id": "CUST00084",
+    "full_name_redacted": "F.D.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-08-14T12:20:34.488727+00:00",
+    "kyc_expires_at": "2027-08-14T12:20:34.488728+00:00",
+    "risk_tier": "A",
+    "city": "Bangalore",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000840",
+      "ACC000841"
+    ]
+  },
+  {
+    "customer_id": "CUST00085",
+    "full_name_redacted": "G.D.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-05-20T12:20:34.488732+00:00",
+    "kyc_expires_at": "2027-05-20T12:20:34.488733+00:00",
+    "risk_tier": "B",
+    "city": "Bangalore",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000850",
+      "ACC000851"
+    ]
+  },
+  {
+    "customer_id": "CUST00086",
+    "full_name_redacted": "H.D.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2024-11-28T12:20:34.488736+00:00",
+    "kyc_expires_at": "2026-11-28T12:20:34.488737+00:00",
+    "risk_tier": "A",
+    "city": "Hyderabad",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000860"
+    ]
+  },
+  {
+    "customer_id": "CUST00087",
+    "full_name_redacted": "I.D.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2024-10-27T12:20:34.488741+00:00",
+    "kyc_expires_at": "2026-10-27T12:20:34.488742+00:00",
+    "risk_tier": "B",
+    "city": "Pune",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000870",
+      "ACC000871"
+    ]
+  },
+  {
+    "customer_id": "CUST00088",
+    "full_name_redacted": "J.D.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-11-06T12:20:34.488745+00:00",
+    "kyc_expires_at": "2027-11-06T12:20:34.488746+00:00",
+    "risk_tier": "B",
+    "city": "Ahmedabad",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000880",
+      "ACC000881"
+    ]
+  },
+  {
+    "customer_id": "CUST00089",
+    "full_name_redacted": "K.D.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-12-21T12:20:34.488749+00:00",
+    "kyc_expires_at": "2027-12-21T12:20:34.488750+00:00",
+    "risk_tier": "D",
+    "city": "Delhi",
+    "co_lending_eligible": false,
+    "account_ids": [
+      "ACC000890",
+      "ACC000891"
+    ]
+  },
+  {
+    "customer_id": "CUST00090",
+    "full_name_redacted": "L.D.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2024-09-16T12:20:34.488754+00:00",
+    "kyc_expires_at": "2026-09-16T12:20:34.488755+00:00",
+    "risk_tier": "B",
+    "city": "Delhi",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000900"
+    ]
+  },
+  {
+    "customer_id": "CUST00091",
+    "full_name_redacted": "M.D.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-07-30T12:20:34.488758+00:00",
+    "kyc_expires_at": "2027-07-30T12:20:34.488759+00:00",
+    "risk_tier": "C",
+    "city": "Chennai",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000910"
+    ]
+  },
+  {
+    "customer_id": "CUST00092",
+    "full_name_redacted": "N.D.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2025-02-11T12:20:34.488762+00:00",
+    "kyc_expires_at": "2027-02-11T12:20:34.488763+00:00",
+    "risk_tier": "A",
+    "city": "Delhi",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000920",
+      "ACC000921"
+    ]
+  },
+  {
+    "customer_id": "CUST00093",
+    "full_name_redacted": "O.D.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2024-10-31T12:20:34.488766+00:00",
+    "kyc_expires_at": "2026-10-31T12:20:34.488767+00:00",
+    "risk_tier": "C",
+    "city": "Kolkata",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000930"
+    ]
+  },
+  {
+    "customer_id": "CUST00094",
+    "full_name_redacted": "P.D.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2026-06-07T12:20:34.488771+00:00",
+    "kyc_expires_at": "2028-06-06T12:20:34.488771+00:00",
+    "risk_tier": "A",
+    "city": "Kolkata",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000940"
+    ]
+  },
+  {
+    "customer_id": "CUST00095",
+    "full_name_redacted": "Q.D.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2024-12-29T12:20:34.488775+00:00",
+    "kyc_expires_at": "2026-12-29T12:20:34.488775+00:00",
+    "risk_tier": "C",
+    "city": "Mumbai",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000950"
+    ]
+  },
+  {
+    "customer_id": "CUST00096",
+    "full_name_redacted": "R.D.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2026-02-08T12:20:34.488779+00:00",
+    "kyc_expires_at": "2028-02-08T12:20:34.488779+00:00",
+    "risk_tier": "C",
+    "city": "Bangalore",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000960"
+    ]
+  },
+  {
+    "customer_id": "CUST00097",
+    "full_name_redacted": "S.D.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2024-11-17T12:20:34.488783+00:00",
+    "kyc_expires_at": "2026-11-17T12:20:34.488783+00:00",
+    "risk_tier": "B",
+    "city": "Pune",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000970",
+      "ACC000971"
+    ]
+  },
+  {
+    "customer_id": "CUST00098",
+    "full_name_redacted": "T.D.",
+    "kyc_status": "REJECTED",
+    "kyc_verified_at": null,
+    "kyc_expires_at": null,
+    "risk_tier": "C",
+    "city": "Kolkata",
+    "co_lending_eligible": false,
+    "account_ids": [
+      "ACC000980",
+      "ACC000981"
+    ]
+  },
+  {
+    "customer_id": "CUST00099",
+    "full_name_redacted": "U.D.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2026-01-01T12:20:34.488789+00:00",
+    "kyc_expires_at": "2028-01-01T12:20:34.488790+00:00",
+    "risk_tier": "B",
+    "city": "Ahmedabad",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC000990",
+      "ACC000991"
+    ]
+  },
+  {
+    "customer_id": "CUST00100",
+    "full_name_redacted": "V.D.",
+    "kyc_status": "VERIFIED",
+    "kyc_verified_at": "2024-08-29T12:20:34.488793+00:00",
+    "kyc_expires_at": "2026-08-29T12:20:34.488794+00:00",
+    "risk_tier": "C",
+    "city": "Ahmedabad",
+    "co_lending_eligible": true,
+    "account_ids": [
+      "ACC001000"
+    ]
+  }
+]
