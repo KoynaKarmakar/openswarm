@@ -93,6 +93,19 @@ def test_skey_encrypts_and_cert_id():
     assert cert_expiry_id(pem) == "20270304"          # not_valid_after YYYYMMDD
 
 
+def test_der_certificate_loads_like_real_uidai_cer():
+    # Real UIDAI .cer files are DER-encoded — encryption must work from DER too.
+    from cryptography import x509
+    from cryptography.hazmat.primitives.serialization import Encoding
+    from app.swarm.connectors.aadhaar_live import load_certificate
+
+    pem = _selfsigned_rsa_cert_pem()
+    der = x509.load_pem_x509_certificate(pem).public_bytes(Encoding.DER)
+    assert load_certificate(der) is not None
+    assert base64.b64decode(encrypt_session_key(der, new_session_key()))
+    assert cert_expiry_id(der) == "20270304"
+
+
 # ── config / env ──────────────────────────────────────────────────────────────
 
 def test_env_overrides_config(monkeypatch):
