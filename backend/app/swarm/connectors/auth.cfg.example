@@ -1,0 +1,31 @@
+# Aadhaar Auth connector configuration (UIDAI Auth API 2.5).
+#
+# Copy to auth.cfg and fill in ONLY within a UIDAI-licensed AUA/KUA deployment.
+# Leaving mode=demo keeps everything offline (Verhoeff + test-series match, no
+# network). Setting mode=live makes the connector BUILD the request envelope and
+# then REFUSE to transmit unless run inside a licensed, authorized integration —
+# it never points at real Aadhaar numbers on its own.
+#
+# Never commit a real license key, ASA key, or .p12 password.
+
+[aua]
+mode = demo
+
+# Your UIDAI-assigned AUA / sub-AUA codes.
+aua_code = public
+sub_aua  = public
+
+# Secrets — supplied by UIDAI/ASA to a licensed operator. Keep out of git.
+license_key      =
+asa_license_key  =
+
+# ASA-routed UIDAI endpoint. Staging/pre-production hosts are provided by UIDAI
+# to registered AUAs only; the public host is shown for shape.
+asa_endpoint = https://auth.uidai.gov.in/2.5
+
+# Certificates / keystore (download UIDAI staging certs from the UIDAI developer
+# page; store outside the repo). public_cert (.cer) encrypts the session key;
+# identity_p12 (.p12) signs the Auth XML.
+public_cert_path  =
+identity_p12_path =
+p12_password      =
