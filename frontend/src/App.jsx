@@ -3,6 +3,7 @@ import { getToken } from './api/client'
 import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
 import Assistant from './pages/Assistant'
+import SwarmConsole from './pages/SwarmConsole'
 import FraudAlerts from './pages/FraudAlerts'
 import AuditTimeline from './pages/AuditTimeline'
 import CaseQueue from './pages/CaseQueue'
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
         <Route path="/assistant"  element={<PrivateRoute><Assistant /></PrivateRoute>} />
+        <Route path="/swarm"      element={<PrivateRoute><SwarmConsole /></PrivateRoute>} />
         <Route path="/fraud"      element={<PrivateRoute><FraudAlerts /></PrivateRoute>} />
         <Route path="/audit"      element={<PrivateRoute><AuditTimeline /></PrivateRoute>} />
         <Route path="/cases"      element={<PrivateRoute><CaseQueue /></PrivateRoute>} />

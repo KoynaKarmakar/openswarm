@@ -2,11 +2,12 @@ import { NavLink, useNavigate } from 'react-router-dom'
 import { clearToken } from '../api/client'
 import {
   LayoutDashboard, MessageSquare, ShieldAlert,
-  ClipboardList, Shield, LogOut, Inbox, Handshake, BadgeCheck,
+  ClipboardList, Shield, LogOut, Inbox, Handshake, BadgeCheck, Network,
 } from 'lucide-react'
 
 const NAV = [
   { to: '/dashboard', label: 'Dashboard',      Icon: LayoutDashboard },
+  { to: '/swarm',      label: 'Swarm Console', Icon: Network         },
   { to: '/assistant',  label: 'AI Assistant',  Icon: MessageSquare   },
   { to: '/fraud',      label: 'Fraud Alerts',  Icon: ShieldAlert     },
   { to: '/cases',      label: 'Case Queue',    Icon: Inbox           },

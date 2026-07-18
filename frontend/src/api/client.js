@@ -73,6 +73,22 @@ export async function chat(message, { userId, accountId, requestType } = {}) {
   return data
 }
 
+// ── Swarm (OpenSwarm 4-agent orchestration) ─────────────────────────────────────
+
+export async function swarmDecide(message, { requestType, userId, accountId, aadhaar, aadhaarOtp, aadhaarName, verifiableCredential } = {}) {
+  const { data } = await http.post('/swarm/decide', {
+    message,
+    request_type: requestType || 'ASSISTANT',
+    user_id: userId || null,
+    account_id: accountId || null,
+    aadhaar: aadhaar || null,
+    aadhaar_otp: aadhaarOtp || null,
+    aadhaar_name: aadhaarName || null,
+    verifiable_credential: verifiableCredential || null,
+  })
+  return data
+}
+
 // ── Audit ─────────────────────────────────────────────────────────────────────
 
 export async function getAuditTrail(limit = 50) {
