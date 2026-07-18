@@ -4,6 +4,15 @@
 .env.*.local
 !.env.example
 
+# Aadhaar / UIDAI credentials & certs — NEVER commit
+auth.cfg
+**/auth.cfg
+*.p12
+*.pfx
+*.cer
+*.pem
+!ca-bundle.crt
+
 # --- macOS ---
 .DS_Store
 
@@ -33,3 +42,6 @@ docker-compose.override.yml
 
 # --- Logs ---
 *.log
+
+# Standalone canvas build output
+frontend/dist-standalone/

@@ -135,10 +135,16 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
+# CORS: default "*" (Bearer-token only, no cookies) so the standalone Swarm
+# Console .html and the OpenSwarm canvas can call the API cross-origin. When "*",
+# credentials must be disabled per the CORS spec; the app uses Bearer tokens
+# (not cookies), so this is safe. Lock down via settings.cors_allow_origins.
+_cors_origins = [o.strip() for o in settings.cors_allow_origins.split(",") if o.strip()]
+_cors_allow_all = _cors_origins == ["*"]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:3000"],
-    allow_credentials=True,
+    allow_origins=_cors_origins,
+    allow_credentials=not _cors_allow_all,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -152,6 +158,7 @@ from app.api.routes_audit import router as audit_router
 from app.api.routes_circulars import router as circulars_router
 from app.api.routes_cases import router as cases_router
 from app.api.routes_policy import router as policy_router
+from app.api.routes_swarm import router as swarm_router
 
 app.include_router(auth_router)
 app.include_router(identity_router)
@@ -161,6 +168,7 @@ app.include_router(audit_router)
 app.include_router(circulars_router)
 app.include_router(cases_router)
 app.include_router(policy_router)
+app.include_router(swarm_router)
 
 
 @app.get("/health")

@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VERITAS × OpenSwarm</title>
+<style>
+  :root{
+    --ink:#1a2540; --mut:#5a6580; --faint:#8b93a6;
+    --coral:#e2502a; --teal:#0c8b84; --green:#0e9f6e; --amber:#a9640c; --blue:#2a62d6; --violet:#6a44c0; --red:#d64545;
+    --glass:rgba(255,255,255,.46); --glass2:rgba(255,255,255,.62); --edge:rgba(255,255,255,.75);
+    --font:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+    --mono:"SF Mono",ui-monospace,"Cascadia Code",Consolas,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-snap-type:y mandatory;scroll-behavior:smooth}
+  body{font-family:var(--font);color:var(--ink);background:#eaf0fb}
+  /* aurora */
+  body::before{content:"";position:fixed;inset:0;z-index:-1;
+    background:
+      radial-gradient(60% 55% at 88% 8%, rgba(255,107,74,.28), transparent 60%),
+      radial-gradient(55% 55% at 6% 92%, rgba(14,168,150,.24), transparent 60%),
+      radial-gradient(50% 50% at 16% 4%, rgba(56,130,235,.22), transparent 60%),
+      radial-gradient(55% 55% at 95% 92%, rgba(140,90,230,.2), transparent 60%),
+      linear-gradient(160deg,#eef3fc,#f3eefb);}
+  .slide{width:100vw;height:100vh;scroll-snap-align:start;display:flex;flex-direction:column;
+    justify-content:center;padding:5.2vh 5.5vw;position:relative;overflow:hidden}
+  .stage{max-width:1180px;width:100%;margin:0 auto}
+  .eyebrow{font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--coral);margin-bottom:14px}
+  h1{font-size:34px;font-weight:800;letter-spacing:-.01em;line-height:1.1;text-wrap:balance}
+  .sub{font-size:17px;color:var(--mut);margin-top:12px;max-width:60ch;line-height:1.5}
+  .glass{background:var(--glass);backdrop-filter:blur(20px) saturate(1.3);-webkit-backdrop-filter:blur(20px) saturate(1.3);
+    border:1px solid var(--edge);border-radius:18px;box-shadow:0 10px 30px -12px rgba(30,45,80,.28), inset 0 1px 0 rgba(255,255,255,.6)}
+  .glass.solid{background:var(--glass2)}
+  .glass.dark{background:rgba(18,26,45,.82);border-color:rgba(255,255,255,.12);color:#dde3f0;
+    box-shadow:0 14px 34px -14px rgba(10,16,32,.6)}
+  .badge{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-weight:800;color:#fff;font-size:20px;flex:0 0 auto;box-shadow:0 6px 16px -4px currentColor}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .row{display:flex;align-items:center;gap:16px}
+  .dot{width:10px;height:10px;border-radius:50%;flex:0 0 auto}
+  .mono{font-family:var(--mono);font-size:12.5px;line-height:1.75}
+  .pill{display:inline-flex;align-items:center;padding:7px 15px;border-radius:999px;font-weight:700;font-size:13px;
+    background:rgba(255,255,255,.55);border:1px solid currentColor}
+  .muted{color:var(--mut)} .small{font-size:13px}
+  /* reveal */
+  .slide .stage>*{opacity:0;transform:translateY(22px);transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1)}
+  .slide.in .stage>*{opacity:1;transform:none}
+  .slide.in .stage>*:nth-child(2){transition-delay:.06s}
+  .slide.in .stage>*:nth-child(3){transition-delay:.12s}
+  .slide.in .stage>*:nth-child(4){transition-delay:.18s}
+  .slide.in .stage>*:nth-child(5){transition-delay:.24s}
+  @media(prefers-reduced-motion:reduce){.slide .stage>*{opacity:1;transform:none;transition:none}}
+  /* progress dots */
+  .nav{position:fixed;right:22px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:9px;z-index:10}
+  .nav a{width:8px;height:8px;border-radius:50%;background:rgba(40,55,90,.25);transition:.25s}
+  .nav a.active{background:var(--coral);transform:scale(1.5)}
+  .brandmark{width:46px;height:46px;border-radius:12px;background:var(--coral);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px}
+  .kline{color:var(--mut)} .kb{font-weight:700}
+</style>
+</head>
+<body>
+<div class="nav" id="nav"></div>
+
+<!-- 1 Title -->
+<section class="slide"><div class="stage">
+  <div class="row" style="gap:12px"><div class="brandmark">V</div><div class="kb muted" style="font-size:15px">OpenSwarm</div></div>
+  <h1 style="font-size:66px;margin-top:8vh;letter-spacing:-.02em">VERITAS <span style="color:var(--coral)">×</span> OpenSwarm</h1>
+  <p class="sub" style="font-size:21px">AI trust middleware for banking — a four-agent swarm for co-lending decisions.</p>
+  <div style="display:flex;gap:12px;margin-top:26px">
+    <span class="pill" style="color:var(--blue)">PII-safe</span>
+    <span class="pill" style="color:var(--green)">Grounded</span>
+    <span class="pill" style="color:var(--amber)">Fraud-checked</span>
+    <span class="pill" style="color:var(--coral)">Audited</span>
+  </div>
+  <div class="grid4" style="margin-top:34px">
+    <div class="glass" style="padding:16px 18px"><div class="row" style="gap:10px"><span class="dot" style="background:var(--blue)"></span><b>Guardrail</b></div></div>
+    <div class="glass" style="padding:16px 18px"><div class="row" style="gap:10px"><span class="dot" style="background:var(--green)"></span><b>Knowledge</b></div></div>
+    <div class="glass" style="padding:16px 18px"><div class="row" style="gap:10px"><span class="dot" style="background:var(--amber)"></span><b>Identity &amp; Fraud</b></div></div>
+    <div class="glass" style="padding:16px 18px"><div class="row" style="gap:10px"><span class="dot" style="background:var(--coral)"></span><b>Auditor</b></div></div>
+  </div>
+</div></section>
+
+<!-- 2 Problem -->
+<section class="slide"><div class="stage">
+  <div class="eyebrow">The problem</div>
+  <h1>Banks want AI for lending — but can't trust it</h1>
+  <div class="grid2" style="margin-top:30px">
+    <div class="glass" style="padding:22px"><div class="row"><div class="badge" style="background:var(--amber)">1</div><div><b style="font-size:19px">Hallucination</b><div class="muted small" style="margin-top:5px">LLMs invent policy — a wrong co-lending rule is a compliance breach.</div><div style="color:var(--amber);font-size:11px;font-weight:700;letter-spacing:.12em;margin-top:8px">WRONG RULE = LIABILITY</div></div></div></div>
+    <div class="glass" style="padding:22px"><div class="row"><div class="badge" style="background:var(--red)">2</div><div><b style="font-size:19px">PII exposure</b><div class="muted small" style="margin-top:5px">Aadhaar &amp; PAN sent to a third-party model is a regulatory violation.</div><div style="color:var(--red);font-size:11px;font-weight:700;letter-spacing:.12em;margin-top:8px">12-DIGIT UID LEAKED</div></div></div></div>
+    <div class="glass" style="padding:22px"><div class="row"><div class="badge" style="background:var(--blue)">3</div><div><b style="font-size:19px">Fraud &amp; identity</b><div class="muted small" style="margin-top:5px">No real KYC or fraud gate before a lending decision is made.</div><div style="color:var(--blue);font-size:11px;font-weight:700;letter-spacing:.12em;margin-top:8px">UNCHECKED ONBOARDING</div></div></div></div>
+    <div class="glass" style="padding:22px"><div class="row"><div class="badge" style="background:var(--violet)">4</div><div><b style="font-size:19px">No audit trail</b><div class="muted small" style="margin-top:5px">Regulators must see why every decision was made — tamper-evident.</div><div style="color:var(--violet);font-size:11px;font-weight:700;letter-spacing:.12em;margin-top:8px">UNPROVABLE DECISIONS</div></div></div></div>
+  </div>
+</div></section>
+
+<!-- 3 Solution -->
+<section class="slide"><div class="stage">
+  <div class="eyebrow">The solution</div>
+  <h1>One request, four agents, one audited decision</h1>
+  <p class="sub">OpenSwarm passes context between agents dynamically. Each does one job well; the Auditor always runs last, so nothing escapes the trail.</p>
+  <div class="grid4" style="margin-top:28px">
+    <div class="glass" style="padding:24px 18px;text-align:center"><div class="badge" style="background:var(--blue);margin:0 auto 14px;width:66px;height:66px;font-size:26px">1</div><b style="font-size:18px">Guardrail</b><div class="muted small" style="margin-top:8px">PII redaction · injection · compliance</div></div>
+    <div class="glass" style="padding:24px 18px;text-align:center"><div class="badge" style="background:var(--green);margin:0 auto 14px;width:66px;height:66px;font-size:26px">2</div><b style="font-size:18px">Knowledge</b><div class="muted small" style="margin-top:8px">grounded policy RAG · no hallucination</div></div>
+    <div class="glass" style="padding:24px 18px;text-align:center"><div class="badge" style="background:var(--amber);margin:0 auto 14px;width:66px;height:66px;font-size:26px">3</div><b style="font-size:18px">Identity &amp; Fraud</b><div class="muted small" style="margin-top:8px">KYC · XGBoost · Google VC · Aadhaar</div></div>
+    <div class="glass" style="padding:24px 18px;text-align:center"><div class="badge" style="background:var(--coral);margin:0 auto 14px;width:66px;height:66px;font-size:26px">4</div><b style="font-size:18px">Auditor</b><div class="muted small" style="margin-top:8px">confidence + SHA-256 hash-chain</div></div>
+  </div>
+  <p style="color:var(--coral);font-style:italic;margin-top:24px;font-size:15px">↳ On a PII / injection catch, Guardrail short-circuits straight to the Auditor — nothing reaches the LLM.</p>
+</div></section>
+
+<!-- 4 Architecture -->
+<section class="slide"><div class="stage">
+  <div class="eyebrow">Architecture</div>
+  <h1>Dynamic handoffs, deterministic audit tail</h1>
+  <div style="display:flex;align-items:center;gap:14px;margin-top:34px">
+    <div class="glass" style="flex:1;padding:20px;text-align:center;border-color:var(--blue)"><b>Guardrail</b><div class="muted small" style="margin-top:6px">redact · scan · block</div></div><span class="muted" style="font-size:22px">→</span>
+    <div class="glass" style="flex:1;padding:20px;text-align:center;border-color:var(--green)"><b>Knowledge</b><div class="muted small" style="margin-top:6px">retrieve · ground</div></div><span class="muted" style="font-size:22px">→</span>
+    <div class="glass" style="flex:1;padding:20px;text-align:center;border-color:var(--amber)"><b>Identity &amp; Fraud</b><div class="muted small" style="margin-top:6px">KYC · fraud · Aadhaar</div></div><span class="muted" style="font-size:22px">→</span>
+    <div class="glass" style="flex:1;padding:20px;text-align:center;border-color:var(--coral)"><b>Auditor</b><div class="muted small" style="margin-top:6px">score · hash-chain</div></div>
+  </div>
+  <p style="color:var(--coral);font-style:italic;margin:16px 0 0;font-size:14px">↳ halt — PII / injection / non-compliant short-circuits to the Auditor</p>
+  <div class="grid4" style="grid-template-columns:repeat(3,1fr);margin-top:30px">
+    <div class="glass" style="padding:18px"><div class="row" style="gap:10px"><span class="dot" style="background:var(--blue)"></span><b>Single LLM chokepoint</b></div><div class="muted small" style="margin-top:7px">every model call goes through one router</div></div>
+    <div class="glass" style="padding:18px"><div class="row" style="gap:10px"><span class="dot" style="background:var(--green)"></span><b>PII never reaches the LLM</b></div><div class="muted small" style="margin-top:7px">only redacted, entity-labelled text does</div></div>
+    <div class="glass" style="padding:18px"><div class="row" style="gap:10px"><span class="dot" style="background:var(--coral)"></span><b>Auditor always runs</b></div><div class="muted small" style="margin-top:7px">no branch escapes the hash-chain ledger</div></div>
+  </div>
+</div></section>
+
+<!-- Agent detail slides via template -->
+<section class="slide" data-agent="0"></section>
+<section class="slide" data-agent="1"></section>
+<section class="slide" data-agent="2"></section>
+<section class="slide" data-agent="3"></section>
+
+<!-- 9 Verified memory -->
+<section class="slide"><div class="stage">
+  <div class="eyebrow" style="color:var(--green)">Knowledge base</div>
+  <h1>Verified memory — every fact is hashed and cited</h1>
+  <p class="sub">Only files whose SHA-256 matches the manifest are retrievable. Tampered or unlisted files are quarantined — an answer can only be grounded in content provably unchanged.</p>
+  <div class="grid4" style="grid-template-columns:repeat(3,1fr);margin-top:24px" id="srcgrid"></div>
+  <p style="color:var(--green);font-style:italic;margin-top:20px;font-size:14px">9 integrity-verified sources · tamper a file → it is quarantined and the chain check reports the break.</p>
+</div></section>
+
+<!-- 10 OpenAI Swarm -->
+<section class="slide"><div class="stage">
+  <div class="eyebrow">Orchestration</div>
+  <h1>Faithful to OpenAI Swarm — agents that hand off</h1>
+  <p class="sub">Implemented from github.com/openai/swarm: agents own functions; a function that returns an Agent is a handoff; shared context_variables thread the run.</p>
+  <div style="display:grid;grid-template-columns:1.1fr 1fr;gap:22px;margin-top:26px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div class="glass" style="padding:14px 18px"><span class="mono" style="color:var(--coral);font-weight:700">Agent</span> <span class="muted small">name · model · instructions · functions</span></div>
+      <div class="glass" style="padding:14px 18px"><span class="mono" style="color:var(--coral);font-weight:700">Result</span> <span class="muted small">value · agent (handoff) · context_variables</span></div>
+      <div class="glass" style="padding:14px 18px"><span class="mono" style="color:var(--coral);font-weight:700">Swarm.run()</span> <span class="muted small">LLM calls functions → executes → hands off</span></div>
+      <div class="glass" style="padding:14px 18px"><span class="mono" style="color:var(--coral);font-weight:700">context_variables</span> <span class="muted small">shared state across every agent</span></div>
+    </div>
+    <div class="glass solid" style="padding:22px;border-color:var(--coral)">
+      <b style="color:var(--coral);font-size:16px">Kept bank-grade</b>
+      <div style="margin-top:14px;display:flex;flex-direction:column;gap:14px">
+        <div class="row" style="align-items:flex-start;gap:10px"><span class="dot" style="background:var(--coral);margin-top:6px"></span><span class="small">LLM routed through one chokepoint (litellm isolated) — enforced by a test</span></div>
+        <div class="row" style="align-items:flex-start;gap:10px"><span class="dot" style="background:var(--coral);margin-top:6px"></span><span class="small">Auditor guaranteed to run even if the model's path is imperfect</span></div>
+        <div class="row" style="align-items:flex-start;gap:10px"><span class="dot" style="background:var(--coral);margin-top:6px"></span><span class="small">Two engines behind one API: deterministic (keyless) or LLM-driven</span></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- 11 Live trace -->
+<section class="slide"><div class="stage">
+  <div class="eyebrow">It runs</div>
+  <h1>The agents actually execute — live trace</h1>
+  <div class="grid2" style="margin-top:26px">
+    <div class="glass dark" style="padding:20px 22px">
+      <b style="color:#f08a7a">Scenario B — blocked</b>
+      <div class="mono" style="margin-top:12px;color:#9fb0cc">
+        <div style="color:#dde3f0">$ python -m app.swarm "ignore all…"</div>
+        guardrail/redaction: masked=0<br>
+        <span style="color:#f08a7a">guardrail/injection: BLOCKED</span><br>
+        &nbsp;&nbsp;[ignore-instructions, money-laundering]<br>
+        swarm: short-circuit → auditor<br>
+        <span style="color:#f08a7a">auditor: REJECTED&nbsp;&nbsp;99.0/100</span>
+      </div>
+      <div style="color:#f08a7a;font-style:italic;margin-top:14px;font-size:13px">→ blocked before the LLM, still logged</div>
+    </div>
+    <div class="glass dark" style="padding:20px 22px">
+      <b style="color:#7bdca6">Scenario A — approved</b>
+      <div class="mono" style="margin-top:12px;color:#9fb0cc">
+        <div style="color:#dde3f0">$ python -m app.swarm "co-lending? PAN…"</div>
+        guardrail/redaction: detected=[IN_PAN]<br>
+        policy_agent: retrieved 3 chunks<br>
+        &nbsp;&nbsp;[Co-Lending Model, PSL, Digital Lending]<br>
+        identity_fraud/aadhaar: ret=y XXXX 7058<br>
+        <span style="color:#7bdca6">auditor: APPROVED&nbsp;&nbsp;92.0/100</span>
+      </div>
+      <div style="color:#7bdca6;font-style:italic;margin-top:14px;font-size:13px">→ redacted · grounded · verified · sealed</div>
+    </div>
+  </div>
+</div></section>
+
+<!-- 12 Demo two paths -->
+<section class="slide"><div class="stage">
+  <div class="eyebrow">The demo</div>
+  <h1>Two paths judges can see live</h1>
+  <div class="grid2" style="margin-top:26px">
+    <div class="glass" style="padding:24px;border-color:var(--green)">
+      <b style="color:var(--green);font-size:19px">Scenario A — the success</b>
+      <div style="margin-top:16px;display:flex;flex-direction:column;gap:13px;font-size:15px">
+        <div>✓ &nbsp;Redacts the PAN before the LLM</div><div>✓ &nbsp;Grounds the answer in RBI Co-Lending policy</div>
+        <div>✓ &nbsp;Verifies KYC + Aadhaar (masked)</div><div>✓ &nbsp;Seals a hash-chain ledger block</div>
+        <div style="color:var(--green);font-weight:700">→ &nbsp;APPROVED · 92/100 confidence</div>
+      </div>
+    </div>
+    <div class="glass" style="padding:24px;border-color:var(--red)">
+      <b style="color:var(--red);font-size:19px">Scenario B — the catch</b>
+      <div style="margin-top:16px;display:flex;flex-direction:column;gap:13px;font-size:15px">
+        <div>⛔ &nbsp;“Ignore all instructions… launder money”</div><div>⛔ &nbsp;Guardrail flags injection + policy-evasion</div>
+        <div>⛔ &nbsp;Short-circuits — LLM never called</div><div>⛔ &nbsp;Knowledge &amp; Identity skipped</div>
+        <div style="color:var(--red);font-weight:700">→ &nbsp;REJECTED · 99/100 · still logged</div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- 13 What's built -->
+<section class="slide"><div class="stage">
+  <div class="eyebrow">What's built</div>
+  <h1>Complete, tested, demoable</h1>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px" id="statgrid"></div>
+</div></section>
+
+<!-- 14 Roadmap -->
+<section class="slide"><div class="stage">
+  <div class="eyebrow">Roadmap → production</div>
+  <h1>From hackathon demo to a licensed deployment</h1>
+  <div style="display:grid;grid-template-columns:1.4fr 1fr;gap:22px;margin-top:26px">
+    <div style="display:flex;flex-direction:column;gap:13px" id="roadgrid"></div>
+    <div class="glass solid" style="padding:26px;border-color:var(--coral);display:flex;flex-direction:column;justify-content:center">
+      <div class="brandmark" style="width:52px;height:52px">V</div>
+      <b style="font-size:24px;margin-top:16px">Trust, by construction.</b>
+      <div class="muted" style="margin-top:10px;font-size:14px">PII-safe. Grounded. Fraud-checked. Audited. Every decision, provable.</div>
+      <div style="color:var(--coral);font-weight:700;margin-top:18px;font-size:13px">VERITAS × OpenSwarm</div>
+    </div>
+  </div>
+</div></section>
+
+<script>
+const AG=[
+  {n:1,name:"Guardrail",tag:"The firewall — nothing reaches the model until it clears here",c:"var(--blue)",rows:[["Presidio PII redaction","Aadhaar / PAN / IFSC / phone → entity labels; mapping never stored"],["Prompt-injection &amp; policy-evasion guard","jailbreaks, money-laundering, fake-KYC, tax-evasion → hard block"],["Hard compliance circulars","NON_COMPLIANT short-circuits straight to the Auditor"]],sv:"0 →",sl:"raw PII masked before anything else sees it"},
+  {n:2,name:"Knowledge",tag:"Grounded answers only — the anti-hallucination agent",c:"var(--green)",rows:[["Retrieve from verified policy memory","top RBI-circular / policy chunks, tightly bounded context"],["Answer ONLY from retrieved text","cites the policy; else replies exactly “I cannot verify this.”"],["Refuses without an LLM call","no policy match → refuse cheaply, never invent"]],sv:"“I cannot verify this.”",sl:"grounded, cited answers — or an honest refusal"},
+  {n:3,name:"Identity &amp; Fraud",tag:"The heavy lifting for onboarding &amp; transactions",c:"var(--amber)",rows:[["KYC + XGBoost fraud model","risk tier, DID credential, UEBT fraud thresholds"],["Google Verifiable Credentials","Ed25519 signature check — real authenticity, not spoofable OCR"],["Aadhaar auth (UIDAI 2.5-shaped)","Verhoeff + demographic / OTP; DEMO, licensed-AUA &amp; KUA paths"]],sv:"XXXX 7058",sl:"only a masked UID ever leaves the agent"},
+  {n:4,name:"Auditor",tag:"The final layer of defence — always runs last",c:"var(--coral)",rows:[["Resolves the final outcome","fraud &gt; identity &gt; compliance &gt; LLM precedence"],["Prints a 0–100 confidence score","explainable, per-decision"],["SHA-256 hash-chain ledger","curr = SHA256(prev + payload + timestamp) — tamper-evident"]],sv:"SHA-256",sl:"every decision logged, no exceptions"},
+];
+document.querySelectorAll("[data-agent]").forEach(sec=>{
+  const a=AG[+sec.dataset.agent];
+  sec.innerHTML=`<div class="stage">
+    <div class="eyebrow" style="color:${a.c}">Agent ${a.n} of 4</div>
+    <div class="row" style="gap:18px"><div class="badge" style="background:${a.c};width:64px;height:64px;font-size:30px">${a.n}</div>
+      <div><h1 style="font-size:32px">${a.name}</h1><div class="muted" style="margin-top:4px">${a.tag}</div></div></div>
+    <div style="display:grid;grid-template-columns:1.7fr 1fr;gap:22px;margin-top:26px">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        ${a.rows.map(r=>`<div class="glass" style="padding:16px 20px"><div class="row" style="gap:12px"><span class="dot" style="background:${a.c}"></span><b>${r[0]}</b></div><div class="muted small" style="margin-top:6px;margin-left:22px">${r[1]}</div></div>`).join("")}
+      </div>
+      <div class="glass solid" style="padding:24px;border-color:${a.c};display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
+        <div style="font-size:${a.sv.length>10?28:46}px;font-weight:800;color:${a.c};line-height:1.1">${a.sv}</div>
+        <div class="muted" style="margin-top:16px;font-size:14px">${a.sl}</div>
+      </div>
+    </div></div>`;
+});
+const SRC=["RBI Co-Lending Model (20% retention)","RBI KYC Master Direction","RBI Digital Lending Guidelines","UIDAI Aadhaar specification","RBI Priority Sector Lending","RBI Master Directions on Frauds","RBI Default Loss Guarantee (DLG)","RBI Fair Practices Code","PMLA — AML reporting (FIU-IND)"];
+document.getElementById("srcgrid").innerHTML=SRC.map(t=>`<div class="glass" style="padding:14px 16px"><div class="row" style="gap:10px"><span class="dot" style="background:var(--green)"></span><b style="font-size:13.5px">${t}</b></div></div>`).join("");
+const STAT=[["4","agents","var(--blue)"],["9","verified sources","var(--green)"],["110+","passing tests","var(--coral)"],["3","ways to run","var(--amber)"],["2","engines","var(--violet)"],["SHA-256","audit ledger","var(--teal)"]];
+document.getElementById("statgrid").innerHTML=STAT.map(s=>`<div class="glass" style="padding:18px 22px;display:flex;align-items:center;gap:18px"><div style="font-size:34px;font-weight:800;color:${s[2]};min-width:110px">${s[0]}</div><div class="muted">${s[1]}</div></div>`).join("");
+const ROAD=[["Aadhaar go-live","register as AUA/KUA, or front UIDAI via a licensed aggregator (built)","var(--coral)"],["Real IDBI adapter","swap the mock bank adapter behind the existing interface","var(--blue)"],["Frontend swarm page","the live console is built; wire it to the production flow","var(--green)"],["Hardening","Alembic migrations · secrets vault · per-agent tracing","var(--amber)"]];
+document.getElementById("roadgrid").innerHTML=ROAD.map((r,i)=>`<div class="glass" style="padding:16px 20px"><div class="row" style="gap:14px"><div class="badge" style="background:${r[2]};width:44px;height:44px;font-size:17px">${i+1}</div><div><b>${r[0]}</b><div class="muted small" style="margin-top:3px">${r[1]}</div></div></div></div>`).join("");
+
+// reveal + nav dots
+const slides=[...document.querySelectorAll(".slide")];
+const nav=document.getElementById("nav");
+slides.forEach((s,i)=>{const a=document.createElement("a");a.href="#";a.onclick=e=>{e.preventDefault();s.scrollIntoView()};nav.appendChild(a);});
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");const i=slides.indexOf(e.target);[...nav.children].forEach((d,j)=>d.classList.toggle("active",j===i));}}),{threshold:.55});
+slides.forEach(s=>io.observe(s));
+addEventListener("keydown",e=>{const i=slides.findIndex(s=>s.getBoundingClientRect().top>=-5);if(e.key==="ArrowDown"||e.key===" "){e.preventDefault();slides[Math.min(i+1,slides.length-1)]?.scrollIntoView()}if(e.key==="ArrowUp"){e.preventDefault();slides[Math.max(i-1,0)]?.scrollIntoView()}});
+</script>
+</body>
+</html>

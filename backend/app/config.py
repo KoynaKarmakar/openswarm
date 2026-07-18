@@ -37,6 +37,11 @@ class Settings(BaseSettings):
     app_env: str = "development"
     log_level: str = "INFO"
 
+    # CORS — comma-separated origins. "*" allows any origin (Bearer-token only,
+    # no cookies) so the standalone Swarm Console .html / OpenSwarm canvas can
+    # call the API. Set to explicit origins to lock it down.
+    cors_allow_origins: str = "*"
+
     @property
     def database_url(self) -> str:
         return (
