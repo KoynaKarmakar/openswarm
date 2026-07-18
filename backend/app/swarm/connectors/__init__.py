@@ -11,6 +11,10 @@ from app.swarm.connectors.google_vc import (
     GoogleVerifiableCredentialsConnector,
     VCVerification,
 )
+from app.swarm.connectors.kua_aggregator import (
+    AggregatorConfig,
+    KuaAggregatorClient,
+)
 
 __all__ = [
     "GoogleVerifiableCredentialsConnector",
@@ -20,4 +24,6 @@ __all__ = [
     "AuaConfig",
     "mask_aadhaar",
     "verhoeff_valid",
+    "KuaAggregatorClient",
+    "AggregatorConfig",
 ]
