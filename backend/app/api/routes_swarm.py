@@ -95,10 +95,17 @@ async def decide(
         extra_context=extra_context,
     )
 
+    # Ground on Qdrant when available; otherwise fall back to the integrity-gated
+    # verified memory corpus so answers are still cited from genuine sources.
+    retriever = request.app.state.qdrant_client
+    if retriever is None:
+        from app.memory.verified_store import get_verified_memory
+        retriever = get_verified_memory()
+
     swarm = build_swarm(
         gate=request.app.state.redaction_gate,
         adapter=request.app.state.bank_adapter,
-        qdrant=request.app.state.qdrant_client,
+        qdrant=retriever,
         db=db,
         circular_gate=getattr(request.app.state, "circular_gate", None),
     )
