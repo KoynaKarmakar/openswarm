@@ -5,6 +5,17 @@ agent system-prompt definitions (`agents/*.md`) + a topology manifest
 (`swarm.md`). The agents wire to the real Python tools in `../backend` (import
 root `app.*`).
 
+## Validate the agents
+
+The `.md` files are real, loadable agent definitions — parse + validate them
+(checks every declared tool resolves to backend code):
+```bash
+cd backend && python -m app.swarm.loader
+```
+`app.swarm.loader.build_swarm_from_markdown(**deps)` builds the live `Swarm`
+from `swarm.md`'s topology, binding each markdown agent to its tested Python
+implementation.
+
 ## Two ways to run it
 
 **A. Native OpenSwarm runtime** — the agent markdown drives OpenSwarm's own
