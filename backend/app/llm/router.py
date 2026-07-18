@@ -74,3 +74,33 @@ async def chat_completion(
         f"All LLM models failed. Primary: {settings.llm_primary_model}, "
         f"Fallback: {settings.llm_fallback_model}"
     )
+
+
+async def acompletion_with_tools(
+    *,
+    model: str,
+    messages: list[dict],
+    tools: list[dict] | None = None,
+    tool_choice: str | None = "auto",
+    temperature: float = 0.7,
+    parallel_tool_calls: bool = True,
+):
+    """
+    Function-calling completion for the OpenAI-Swarm engine (app/swarm/oai/core.py).
+
+    Returns the raw provider message (OpenAI-compatible: `.content` and
+    `.tool_calls`). This is the ONLY place litellm is called with tools — the
+    Swarm loop must never call a provider SDK directly (test_no_llm_bypass.py).
+
+    Callers pass already-redacted `messages`.
+    """
+    import litellm  # deferred — not available without API keys in test env
+
+    litellm.drop_params = True
+    params: dict = {"model": model, "messages": messages, "temperature": temperature}
+    if tools:
+        params["tools"] = tools
+        params["tool_choice"] = tool_choice or "auto"
+        params["parallel_tool_calls"] = parallel_tool_calls
+    response = await litellm.acompletion(**params)
+    return response.choices[0].message

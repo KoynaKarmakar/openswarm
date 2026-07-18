@@ -33,7 +33,7 @@ entry ─▶ [ DYNAMIC ZONE: agents hand off at runtime ] ─▶ TERMINAL (alway
 ## LLM chokepoint (unchanged rule)
 
 The conductor performs **no** LLM calls. Any agent that needs reasoning calls
-`app.llm.router.chat_completion`, keeping `litellm.acompletion()` isolated to
+`app.llm.router.chat_completion`, keeping the provider SDK call isolated to
 `app/llm/router.py` (enforced by `tests/test_no_llm_bypass.py`).
 
 ## Reusing the existing engine nodes
