@@ -135,10 +135,16 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
+# CORS: default "*" (Bearer-token only, no cookies) so the standalone Swarm
+# Console .html and the OpenSwarm canvas can call the API cross-origin. When "*",
+# credentials must be disabled per the CORS spec; the app uses Bearer tokens
+# (not cookies), so this is safe. Lock down via settings.cors_allow_origins.
+_cors_origins = [o.strip() for o in settings.cors_allow_origins.split(",") if o.strip()]
+_cors_allow_all = _cors_origins == ["*"]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:3000"],
-    allow_credentials=True,
+    allow_origins=_cors_origins,
+    allow_credentials=not _cors_allow_all,
     allow_methods=["*"],
     allow_headers=["*"],
 )
