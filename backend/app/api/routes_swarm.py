@@ -40,6 +40,13 @@ class SwarmRequest(BaseModel):
     extra_context: dict = {}
     # Optional presented Google Verifiable Credential (W3C VC 2.0).
     verifiable_credential: dict | None = None
+    # Optional Aadhaar auth (UIDAI Auth 2.5-shaped, DEMO by default). The raw
+    # number is used only for verification and is never echoed, logged, or sent
+    # to the LLM — only a masked reference appears in the response.
+    aadhaar: str | None = None
+    aadhaar_name: str | None = None
+    aadhaar_yob: str | None = None
+    aadhaar_otp: str | None = None
 
 
 class SwarmResponse(BaseModel):
@@ -53,7 +60,8 @@ class SwarmResponse(BaseModel):
     response: str | None                 # grounded LLM answer, if any
     handoff_path: list[str]              # which agents ran, in order
     trace: list[str]
-    vc_verification: dict | None = None  # Google VC connector result, if presented
+    vc_verification: dict | None = None       # Google VC connector result, if presented
+    aadhaar_verification: dict | None = None  # UIDAI-shaped result (masked UID only)
 
 
 @router.post("/decide", response_model=SwarmResponse)
@@ -69,6 +77,14 @@ async def decide(
     extra_context = dict(payload.extra_context or {})
     if payload.verifiable_credential:
         extra_context["verifiable_credential"] = payload.verifiable_credential
+    if payload.aadhaar:
+        extra_context["aadhaar"] = payload.aadhaar
+        if payload.aadhaar_name:
+            extra_context["aadhaar_name"] = payload.aadhaar_name
+        if payload.aadhaar_yob:
+            extra_context["aadhaar_yob"] = payload.aadhaar_yob
+        if payload.aadhaar_otp:
+            extra_context["aadhaar_otp"] = payload.aadhaar_otp
 
     ctx = SwarmContext(
         request_id=request_id,
@@ -90,7 +106,9 @@ async def decide(
 
     entity_map = result.get("entity_map") or {}
     identity = result.get("identity_result") or {}
-    vc = (identity.get("details") or {}).get("vc_verification")
+    details = identity.get("details") or {}
+    vc = details.get("vc_verification")
+    aadhaar = details.get("aadhaar_auth")
 
     return SwarmResponse(
         request_id=request_id,
@@ -104,4 +122,5 @@ async def decide(
         handoff_path=result.handoff_path,
         trace=result.trace,
         vc_verification=vc,
+        aadhaar_verification=aadhaar,
     )
