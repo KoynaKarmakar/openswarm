@@ -1,6 +1,11 @@
 import axios from 'axios'
+import { mockSwarmDecide } from './swarmMock'
 
 const BASE = '/api'
+// Standalone / canvas build sets this so the swarm runs with no backend
+// (via VITE_SWARM_MOCK at build time, or window.__SWARM_MOCK__ at runtime).
+const SWARM_MOCK = import.meta.env?.VITE_SWARM_MOCK === '1'
+  || (typeof window !== 'undefined' && window.__SWARM_MOCK__ === true)
 
 // JWT stored in module memory — not localStorage (avoids XSS persistence).
 // Cleared on page reload, which is intentional for a banking prototype.
@@ -75,18 +80,26 @@ export async function chat(message, { userId, accountId, requestType } = {}) {
 
 // ── Swarm (OpenSwarm 4-agent orchestration) ─────────────────────────────────────
 
-export async function swarmDecide(message, { requestType, userId, accountId, aadhaar, aadhaarOtp, aadhaarName, verifiableCredential } = {}) {
-  const { data } = await http.post('/swarm/decide', {
-    message,
-    request_type: requestType || 'ASSISTANT',
-    user_id: userId || null,
-    account_id: accountId || null,
-    aadhaar: aadhaar || null,
-    aadhaar_otp: aadhaarOtp || null,
-    aadhaar_name: aadhaarName || null,
-    verifiable_credential: verifiableCredential || null,
-  })
-  return data
+export async function swarmDecide(message, opts = {}) {
+  const { requestType, userId, accountId, aadhaar, aadhaarOtp, aadhaarName, verifiableCredential } = opts
+  if (SWARM_MOCK) return mockSwarmDecide(message, opts)
+  try {
+    const { data } = await http.post('/swarm/decide', {
+      message,
+      request_type: requestType || 'ASSISTANT',
+      user_id: userId || null,
+      account_id: accountId || null,
+      aadhaar: aadhaar || null,
+      aadhaar_otp: aadhaarOtp || null,
+      aadhaar_name: aadhaarName || null,
+      verifiable_credential: verifiableCredential || null,
+    })
+    return data
+  } catch (err) {
+    // Backend unreachable (no response) → run the swarm locally so the UI still works.
+    if (!err.response) return mockSwarmDecide(message, opts)
+    throw err
+  }
 }
 
 // ── Audit ─────────────────────────────────────────────────────────────────────

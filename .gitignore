@@ -42,3 +42,6 @@ docker-compose.override.yml
 
 # --- Logs ---
 *.log
+
+# Standalone canvas build output
+frontend/dist-standalone/

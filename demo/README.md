@@ -1,4 +1,20 @@
-# VERITAS Swarm Dashboard — the demo App
+# VERITAS Swarm — canvas Apps
+
+Two self-contained, single-file Apps you can drop onto the **OpenSwarm workspace
+canvas** (or open directly in a browser) — no build, no server, no network:
+
+| File | What it is |
+|---|---|
+| `veritas-swarm-console.html` | **The real React Swarm Console UI** — the actual `/swarm/decide` frontend, built to one file, running the agents client-side (`window.__SWARM_MOCK__`) with staged "agents running" animation. Regenerate: `cd frontend && npm run build:standalone` → `dist-standalone/standalone.html`. |
+| `veritas-swarm-dashboard.html` | A lighter hand-built dashboard visualization of the same swarm. |
+
+Both show the four agents running end-to-end (redaction, injection catch, grounded
+RAG, Google VC, Aadhaar OTP, confidence gauge, SHA-256 ledger). The Console mirrors
+the production UI; when a backend is reachable it calls the live API instead.
+
+---
+
+## veritas-swarm-dashboard.html
 
 `veritas-swarm-dashboard.html` is a **self-contained, single-file** interactive
 demo of the OpenSwarm-orchestrated VERITAS trust swarm. No build step, no server,
