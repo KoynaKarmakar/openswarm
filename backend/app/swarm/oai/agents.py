@@ -175,6 +175,40 @@ def build_veritas_swarm(*, retriever=None, adapter=None, aadhaar_connector=None)
     return guardrail_agent
 
 
+def summarize_run(resp) -> dict:
+    """
+    Reduce a Swarm Response into the /swarm/decide response shape:
+    handoff_path (from the ordered agent senders), a readable trace (from the
+    tool messages), and the resolved fields from context_variables.
+    """
+    cv = resp.context_variables
+    path: list[str] = []
+    trace: list[str] = []
+    for m in resp.messages:
+        sender = m.get("sender")
+        if sender and (not path or path[-1] != sender):
+            path.append(sender)
+        if m.get("role") == "tool":
+            trace.append(f"{m.get('tool_name')}: {m.get('content')}")
+        elif m.get("role") == "assistant" and m.get("content"):
+            trace.append(f"{sender or 'assistant'}: {m.get('content')}")
+    aadhaar = None
+    if cv.get("aadhaar_ret"):
+        aadhaar = {"ret": cv.get("aadhaar_ret"), "masked_uid": cv.get("aadhaar_masked"), "mode": "demo"}
+    return {
+        "outcome": cv.get("final_outcome", "NEEDS_REVIEW"),
+        "confidence": cv.get("final_confidence"),
+        "confidence_score": cv.get("confidence_score"),
+        "redacted": cv.get("redacted_input", ""),
+        "pii_types": cv.get("pii_types", []),
+        "answer": cv.get("answer"),
+        "cited": cv.get("cited"),
+        "handoff_path": path,
+        "trace": trace,
+        "aadhaar": aadhaar,
+    }
+
+
 async def run_veritas(swarm, raw_input: str, *, aadhaar: str = "", aadhaar_otp: str = "",
                       retriever=None, max_turns: int = 12, model_override=None):
     """

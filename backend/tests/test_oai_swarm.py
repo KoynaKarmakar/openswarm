@@ -10,8 +10,8 @@ import types as pytypes
 import pytest
 
 from app.memory.verified_store import get_verified_memory
-from app.swarm.oai import Agent, Result, Swarm, function_to_json
-from app.swarm.oai.agents import build_veritas_swarm, run_veritas
+from app.swarm.oai import Agent, Response, Result, Swarm, function_to_json
+from app.swarm.oai.agents import build_veritas_swarm, run_veritas, summarize_run
 
 
 # ── fake provider messages ────────────────────────────────────────────────────
@@ -162,3 +162,23 @@ async def test_run_veritas_guarantees_final_outcome():
     sw = Swarm(completion=scripted([FakeMsg(content="I will not use tools")]))
     resp = await run_veritas(sw, "co-lending exposure share", retriever=mem())
     assert resp.context_variables["final_outcome"] is not None
+
+
+def test_summarize_run_maps_to_api_shape():
+    resp = Response(
+        messages=[
+            {"role": "assistant", "sender": "guardrail", "content": None},
+            {"role": "tool", "tool_name": "redact_input", "content": "redacted → hi"},
+            {"role": "assistant", "sender": "knowledge", "content": None},
+            {"role": "tool", "tool_name": "retrieve_policy", "content": "CLM: 20%"},
+            {"role": "assistant", "sender": "auditor", "content": "Decision recorded."},
+        ],
+        context_variables={"final_outcome": "APPROVED", "final_confidence": 0.92, "confidence_score": 92.0,
+                           "redacted_input": "hi", "pii_types": [], "answer": "Per CLM, 20%.",
+                           "cited": ["RBI Co-Lending Model (CLM)"], "aadhaar_ret": "y", "aadhaar_masked": "XXXX XXXX 7058"},
+    )
+    s = summarize_run(resp)
+    assert s["handoff_path"] == ["guardrail", "knowledge", "auditor"]
+    assert s["outcome"] == "APPROVED" and s["confidence_score"] == 92.0
+    assert any("redact_input" in t for t in s["trace"])
+    assert s["aadhaar"]["masked_uid"] == "XXXX XXXX 7058"

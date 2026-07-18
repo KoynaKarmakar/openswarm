@@ -116,6 +116,7 @@ function Console({ conn, lastHash, onDecision }) {
   const [stream, setStream] = useState([])
   const [dec, setDec] = useState(null)
   const [err, setErr] = useState('')
+  const [engine, setEngine] = useState('graph')   // graph = deterministic, oai = LLM-driven
 
   const canRun = !running && (message.trim() || aadhaar.trim())
 
@@ -151,7 +152,7 @@ function Console({ conn, lastHash, onDecision }) {
 
     if (conn.live) {
       try {
-        const data = await api.decide(conn, { message: msg, aadhaar: aad, otp: o })
+        const data = await api.decide(conn, { message: msg, aadhaar: aad, otp: o, engine })
         const decision = mapBackendDecision(data)
         await revealBackend(decision)
         setDec(decision); onDecision(decision); setRunning(false)
@@ -184,6 +185,11 @@ function Console({ conn, lastHash, onDecision }) {
             <input value={aadhaar} onChange={e => setAadhaar(e.target.value)} placeholder="999941057058" className="input py-1.5 text-xs font-mono w-40" /></label>
           <label className="text-[11px] text-ink-muted font-mono flex flex-col gap-1">OTP
             <input value={otp} onChange={e => setOtp(e.target.value)} placeholder="123456" className="input py-1.5 text-xs font-mono w-24" /></label>
+          <label className="text-[11px] text-ink-muted font-mono flex flex-col gap-1" title={conn.live ? 'oai = LLM-driven Swarm (needs a model on the backend)' : 'engine applies only when connected to the backend'}>Engine
+            <select value={engine} onChange={e => setEngine(e.target.value)} className="input py-1.5 text-xs">
+              <option value="graph">graph (deterministic)</option>
+              <option value="oai">oai (LLM-driven)</option>
+            </select></label>
           <button onClick={() => run()} disabled={!canRun} className="btn-primary px-4 py-2 ml-auto flex items-center gap-2">
             {running ? <Loader2 size={16} className="animate-spin" /> : <Send size={16} />} Run swarm
           </button>

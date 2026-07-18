@@ -30,7 +30,7 @@ export async function health(base) {
 // POST /swarm/decide → { outcome, confidence_score, redacted_message,
 //   detected_pii_types, response, handoff_path, trace, vc_verification,
 //   aadhaar_verification, decision_id, request_id }
-export async function decide(conn, { message, requestType, aadhaar, otp }) {
+export async function decide(conn, { message, requestType, aadhaar, otp, engine }) {
   return req(conn.base, '/swarm/decide', {
     method: 'POST', token: conn.token,
     body: {
@@ -38,6 +38,7 @@ export async function decide(conn, { message, requestType, aadhaar, otp }) {
       request_type: requestType || 'ASSISTANT',
       aadhaar: aadhaar || null,
       aadhaar_otp: otp || null,
+      engine: engine || 'graph',   // "graph" (deterministic) | "oai" (LLM-driven Swarm)
     },
   })
 }

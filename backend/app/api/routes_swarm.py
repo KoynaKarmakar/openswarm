@@ -16,7 +16,7 @@ from __future__ import annotations
 
 import uuid
 
-from fastapi import APIRouter, Depends, Request
+from fastapi import APIRouter, Depends, HTTPException, Request
 from pydantic import BaseModel
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -38,6 +38,10 @@ class SwarmRequest(BaseModel):
     request_type: str = "ASSISTANT"
     request_id: str | None = None
     extra_context: dict = {}
+    # "graph" (default) = deterministic hybrid swarm (no LLM keys needed).
+    # "oai" = the OpenAI-Swarm LLM-driven engine (agents call functions + hand
+    # off; requires a live model via router.py).
+    engine: str = "graph"
     # Optional presented Google Verifiable Credential (W3C VC 2.0).
     verifiable_credential: dict | None = None
     # Optional Aadhaar auth (UIDAI Auth 2.5-shaped, DEMO by default). The raw
@@ -102,6 +106,10 @@ async def decide(
         from app.memory.verified_store import get_verified_memory
         retriever = get_verified_memory()
 
+    # ── OpenAI-Swarm (LLM-driven) engine ─────────────────────────────────────
+    if payload.engine == "oai":
+        return await _decide_oai(payload, request_id, request_type, retriever, db)
+
     swarm = build_swarm(
         gate=request.app.state.redaction_gate,
         adapter=request.app.state.bank_adapter,
@@ -130,4 +138,46 @@ async def decide(
         trace=result.trace,
         vc_verification=vc,
         aadhaar_verification=aadhaar,
+    )
+
+
+async def _decide_oai(payload, request_id, request_type, retriever, db) -> SwarmResponse:
+    """Run the OpenAI-Swarm LLM-driven engine (agents call functions + hand off)."""
+    from app.swarm.oai import Swarm
+    from app.swarm.oai.agents import run_veritas, summarize_run
+
+    swarm = Swarm()  # default completion → router.acompletion_with_tools (needs a live model)
+    try:
+        resp = await run_veritas(
+            swarm, payload.message,
+            aadhaar=payload.aadhaar or "", aadhaar_otp=payload.aadhaar_otp or "",
+            retriever=retriever,
+        )
+    except Exception as exc:  # noqa: BLE001 — no keys / model error
+        raise HTTPException(
+            status_code=503,
+            detail=f"OAI swarm engine unavailable (needs a configured LLM): {exc}",
+        )
+
+    s = summarize_run(resp)
+
+    decision_id = None
+    try:
+        from app.ledger.outbox import write_decision_with_intent
+        async with db.begin():
+            decision = await write_decision_with_intent(
+                db, request_id=request_id, decision_type=request_type,
+                outcome=s["outcome"], confidence=s["confidence"],
+                trace=s["trace"], redacted_context=s["redacted"],
+            )
+        decision_id = str(decision.id)
+    except Exception:  # noqa: BLE001
+        pass
+
+    return SwarmResponse(
+        request_id=request_id, decision_id=decision_id,
+        outcome=s["outcome"], confidence=s["confidence"], confidence_score=s["confidence_score"],
+        redacted_message=s["redacted"], detected_pii_types=sorted(set(s["pii_types"])),
+        response=s["answer"], handoff_path=s["handoff_path"], trace=s["trace"],
+        vc_verification=None, aadhaar_verification=s["aadhaar"],
     )
