@@ -19,6 +19,11 @@ from app.swarm.core import Directive
 class KnowledgeAgent:
     name = "knowledge"
 
+    def __init__(self, **_deps):
+        # Base placeholder swallows injected deps (qdrant);
+        # the agent-knowledge branch tightens this signature.
+        pass
+
     async def run(self, ctx: SwarmContext) -> Directive:
         ctx.log("knowledge: placeholder pass-through (base branch)")
         return Directive()

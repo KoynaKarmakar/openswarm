@@ -20,6 +20,11 @@ from app.swarm.core import Directive
 class IdentityFraudAgent:
     name = "identity_fraud"
 
+    def __init__(self, **_deps):
+        # Base placeholder swallows injected deps (adapter);
+        # the agent-identity-fraud branch tightens this signature.
+        pass
+
     async def run(self, ctx: SwarmContext) -> Directive:
         ctx.log("identity_fraud: placeholder pass-through (base branch)")
         return Directive()

@@ -24,6 +24,11 @@ from app.swarm.core import Directive
 class AuditorAgent:
     name = "auditor"
 
+    def __init__(self, **_deps):
+        # Base placeholder swallows injected deps (db);
+        # the agent-auditor branch tightens this signature.
+        pass
+
     async def run(self, ctx: SwarmContext) -> Directive:
         ctx.log(
             "auditor: placeholder — final outcome + hash-chain write happens here "

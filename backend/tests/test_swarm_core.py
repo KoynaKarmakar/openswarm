@@ -90,6 +90,17 @@ async def test_terminal_cannot_be_in_dynamic_zone():
         Swarm([dup], _Recorder("auditor"))
 
 
+async def test_build_swarm_runs_placeholders_end_to_end():
+    # build_swarm must assemble and run with no deps (base branch),
+    # ending at the Auditor terminal agent.
+    from app.swarm.orchestrator import build_swarm
+
+    swarm = build_swarm()
+    ctx = await swarm.run(_ctx())
+
+    assert ctx.handoff_path == ["guardrail", "knowledge", "identity_fraud", "auditor"]
+
+
 async def test_absorb_merges_trace_and_vars():
     ctx = _ctx()
     ctx.log("first")

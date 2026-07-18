@@ -22,6 +22,11 @@ from app.swarm.core import Directive
 class GuardrailAgent:
     name = "guardrail"
 
+    def __init__(self, **_deps):
+        # Base placeholder swallows injected deps (gate, circular_gate);
+        # the agent-guardrail branch tightens this signature.
+        pass
+
     async def run(self, ctx: SwarmContext) -> Directive:
         ctx.log("guardrail: placeholder pass-through (base branch)")
         return Directive()

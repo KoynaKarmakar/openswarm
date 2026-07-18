@@ -35,9 +35,9 @@ def build_swarm(
     threads the deps it needs into its own constructor.
     """
     dynamic_zone = [
-        GuardrailAgent(),
-        KnowledgeAgent(),
-        IdentityFraudAgent(),
+        GuardrailAgent(gate=gate, circular_gate=circular_gate),
+        KnowledgeAgent(qdrant=qdrant),
+        IdentityFraudAgent(adapter=adapter),
     ]
-    terminal = AuditorAgent()
+    terminal = AuditorAgent(db=db)
     return Swarm(dynamic_zone, terminal)
