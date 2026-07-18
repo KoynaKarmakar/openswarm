@@ -152,6 +152,7 @@ from app.api.routes_audit import router as audit_router
 from app.api.routes_circulars import router as circulars_router
 from app.api.routes_cases import router as cases_router
 from app.api.routes_policy import router as policy_router
+from app.api.routes_swarm import router as swarm_router
 
 app.include_router(auth_router)
 app.include_router(identity_router)
@@ -161,6 +162,7 @@ app.include_router(audit_router)
 app.include_router(circulars_router)
 app.include_router(cases_router)
 app.include_router(policy_router)
+app.include_router(swarm_router)
 
 
 @app.get("/health")
