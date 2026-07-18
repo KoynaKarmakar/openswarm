@@ -37,7 +37,7 @@ def test_search_returns_cited_source():
 
 def test_offtopic_query_returns_nothing():
     # nothing verified matches → Knowledge agent will refuse ("I cannot verify this")
-    assert VerifiedMemoryStore().search("how do I launder money offshore") == []
+    assert VerifiedMemoryStore().search("what is the best pizza topping for dinner") == []
 
 
 def test_chunk_is_qdrant_compatible():
@@ -81,6 +81,15 @@ def test_unlisted_file_is_quarantined(tmp_path):
 def test_manifest_is_deterministic():
     m1, m2 = build_manifest(), build_manifest()
     assert m1 == m2 and len(m1) >= 4
+
+
+def test_expanded_corpus_covers_fraud_and_aml():
+    store = VerifiedMemoryStore()
+    assert len(store.verify_integrity()) >= 9
+    fraud = store.search("fraud early warning red flagged velocity", top_k=1)
+    assert fraud and "Frauds" in fraud[0].policy_name
+    aml = store.search("suspicious transaction cash 10 lakh laundering", top_k=1)
+    assert aml and "PMLA" in aml[0].policy_name
 
 
 # ── Knowledge agent grounds on verified memory (drop-in for Qdrant) ───────────

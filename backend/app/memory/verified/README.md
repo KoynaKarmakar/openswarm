@@ -25,9 +25,14 @@ vouched for.
 
 ## Sources
 
-| Ref | Publisher |
-|---|---|
-| RBI/2020-21/63 (Co-Lending Model) | Reserve Bank of India |
-| Master Direction DBR.AML.BC.No.81/... (KYC) | Reserve Bank of India |
-| RBI/2022-23/111 (Digital Lending) | Reserve Bank of India |
-| Aadhaar (Authentication) Regulations, 2016 | UIDAI |
+| Ref | Publisher | Topic |
+|---|---|---|
+| RBI/2020-21/63 | Reserve Bank of India | Co-Lending Model (20% retention) |
+| Master Direction DBR.AML.BC.No.81/... | Reserve Bank of India | KYC periodic updation |
+| RBI/2022-23/111 | Reserve Bank of India | Digital Lending Guidelines |
+| Aadhaar (Authentication) Regulations, 2016 | UIDAI | Aadhaar number / auth |
+| FIDD.CO.Plan.BC.5/04.09.01/2020-21 | Reserve Bank of India | Priority Sector Lending |
+| DBS.CO.CFMC.BC.No.1/23.04.001/2016-17 | Reserve Bank of India | Frauds — EWS / RFA / reporting |
+| RBI/2023-24/41 | Reserve Bank of India | Default Loss Guarantee (DLG/FLDG) |
+| DNBR.PD.008/03.10.119/2016-17 | Reserve Bank of India | Fair Practices Code (NBFC) |
+| PMLA, 2002 & PML Rules | FIU-IND | AML — STR / CTR reporting |
